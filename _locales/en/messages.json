@@ -1,0 +1,10 @@
+{
+    "extensionName": {
+        "message": "Duplicate Favorites Remover",
+        "description": "Name of the extension."
+    },
+    "extensionDescription": {
+        "message": "An extension to identify and remove duplicate favorites (a.k.a bookmarks) in Microsoft Edge web browser.",
+        "description": "Description of the extension."
+    }
+}
