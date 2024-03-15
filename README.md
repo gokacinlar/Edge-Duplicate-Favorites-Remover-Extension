@@ -1,4 +1,4 @@
-# Welcome to StackEdit!
+# Edge Duplicate Favorites Remover Extension
 ![Screenshot 1](https://github.com/gokacinlar/Edge-Duplicate-Favorites-Remover-Extension/blob/main/screenshots/main.png)
 
 This super simple extension for Microsoft Edge and Chromium-based browsers identifies duplicate bookmarks of users' index and removes them.
