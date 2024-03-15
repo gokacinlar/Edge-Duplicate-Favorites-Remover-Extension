@@ -20,10 +20,11 @@ document.getElementById("submit").addEventListener("click", () => {
         bookmarksUrls = {};
         duplicateCount = 0;
         bookmarksDiv.appendChild(displayBookmarks(bookmarkTreeNodes));
+        if (duplicateCount === 1) {
+            infoText.innerText = duplicateCount + " duplicate have been found!";
+        }
         if (duplicateCount === 0) {
             infoText.innerText = "No duplicates have been found!";
-        } else if (duplicateCount === 1) {
-            infoText.innerText = duplicateCount + " duplicate have been found!";
         } else {
             infoText.innerText = duplicateCount + " duplicates have been found.";
             bookmarksDiv.style.display = "block";
