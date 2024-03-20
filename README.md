@@ -4,7 +4,9 @@
 This super simple extension for Microsoft Edge and Chromium-based browsers identifies duplicate bookmarks of users' index and removes them.
 
 # Usage
-Extension will be available upon approval from Microsoft. However, if you want to run the extension locally, follow these steps:
+Extension is accessible in [here](https://microsoftedge.microsoft.com/addons/detail/duplicate-favorites-remov/oniadjdhgdpkafdjnmmbnecpcmmjjlfm).
+
+In addition, if you want to run the extension locally, follow these steps:
 
 1. Clone the repository
 2. Unpack the extension by going in Edge:
