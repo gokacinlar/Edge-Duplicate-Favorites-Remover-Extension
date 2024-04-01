@@ -63,13 +63,12 @@ function displayBookmark(bookmarkNode) {
             removeButtons.forEach(button => button.disabled = true);
 
             let popUpWarning = document.createElement("div");
-            let popUpBtn = document.createElement("button");
-            document.body.appendChild(popUpWarning);
-
             popUpWarning.className = "w-100 p-3 d-flex flex-row gap-3 justify-content-between align-items-center bg-primary border-0";
             popUpWarning.innerText = "This action cannot be undone. Do you wish to continue?"
+            let popUpBtn = document.createElement("button");
             popUpBtn.className = "btn btn-warning btn-lg p-1 w-25"
             popUpBtn.innerText = "Yes"
+            document.body.appendChild(popUpWarning);
 
             popUpBtn.addEventListener("click", function () {
                 chrome.bookmarks.remove(bookmarkNode.id);
@@ -81,7 +80,17 @@ function displayBookmark(bookmarkNode) {
 
                 if (duplicateCount === 0) {
                     infoText.innerText = "You have successfully deleted all the duplicate bookmarks!";
-                    bookmarksDiv.style.display = "none";
+                    // remove unnecessary dom bookmarks div
+                    let bookmarksDiv = document.getElementById("bookmarks");
+                    bookmarksDiv.remove();
+                    // remove leftover nested ul list-groups
+                    let duplicateUlElements = document.querySelectorAll("ul.list-group");
+                    duplicateUlElements.forEach((ul) => {
+                        ul.remove();
+                    });
+                    // styling to reset height & width after deletion of favorites
+                    document.body.setAttribute("style", "height: fit-content !important; width: 512px;");
+                    document.documentElement.setAttribute("style", "height: fit-content !important;")
                 }
             });
 
