@@ -1,8 +1,8 @@
 {
   "name": "Duplicate Favorites Remover",
   "author": "Derviş Öksüzoğlu",
-  "version": "1.0.2",
-  "version_name": "1.0.2",
+  "version": "1.0.3",
+  "version_name": "1.0.3",
   "incognito": "not_allowed",
   "manifest_version": 3,
   "description": "An extension to identify and remove duplicate favorites (a.k.a bookmarks) in Microsoft Edge web browser.",
