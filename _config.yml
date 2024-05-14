@@ -1,3 +1,4 @@
 theme: jekyll-theme-minimal
 title: Duplicate Favorites Remover for Microsoft Edge
 description: Identify and remove duplicate bookmarks (a.k.a favorites) in Microsoft Edge Web Browser.
+source: DIR
