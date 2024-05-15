@@ -93,7 +93,41 @@ function displayBookmark(bookmarkNode) {
 
                     // remove unnecessary dom bookmarks div
                     let bookmarksDiv = document.getElementById("bookmarks");
-                    bookmarksDiv.remove();
+
+                    // function to remove (if any) empty folders in bookmarks
+                    let deleteFolderDiv = document.createElement("div");
+                    deleteFolderDiv.className = "w-100 p-3 m-2 d-flex flex-row gap-3 justify-content-between align-items-center bg-primary border-0 rounded";
+                    deleteFolderDiv.innerText = "Do you want to search for empty folders?";
+
+                    // create buttons to approve or deny the deletion of empty folders
+
+                    let deleteFolderBtnYes = document.createElement("button");
+                    deleteFolderBtnYes.className = "btn btn-outline-warning text-white btn-lg ml-auto";
+                    deleteFolderBtnYes.innerText = "Yes";
+                    deleteFolderDiv.appendChild(deleteFolderBtnYes);
+
+                    let deleteFolderBtnNo = document.createElement("button");
+                    deleteFolderBtnNo.className = "btn btn-outline-danger text-white btn-lg ml-auto";
+                    deleteFolderBtnNo.innerText = "No";
+                    deleteFolderDiv.appendChild(deleteFolderBtnNo);
+
+                    bookmarksDiv.appendChild(deleteFolderDiv);
+
+                    // actual work is done here
+                    // fix me
+                    deleteFolderBtnYes.addEventListener("click", async () => {
+                        const bookmarkTreeNodes = await chrome.bookmarks.getTree();
+                        const emptyFolders = findEmptyFolders(bookmarkTreeNodes);
+                        emptyFolders.forEach(folder => {
+                            chrome.bookmarks.removeTree(folder.id);
+                        })
+                        infoText.innerText = "All empty folders have been removed!";
+                        bookmarksDiv.remove();
+                    });
+
+                    deleteFolderBtnNo.addEventListener("click", () => {
+                        bookmarksDiv.remove();
+                    });
 
                     // remove leftover nested ul list-groups
                     let duplicateUlElements = document.querySelectorAll("ul.list-group");
@@ -124,4 +158,28 @@ function displayBookmark(bookmarkNode) {
         return null;
     }
     return listItem;
+}
+
+// function to recursively check if a folder in bookmark is empty
+
+function isEmptyFolder(node) {
+    return node.children && node.children.length === 0;
+}
+
+// function to search bookmarks and find empty folder
+
+function findEmptyFolders(bookmarksTree, emptyFolders = []) {
+    for (let node of bookmarksTree) {
+        // check if any folder's existence
+        if (node.children) {
+            // check if current node is an empty folder
+            if (isEmptyFolder(node)) {
+                emptyFolders.push(node);
+            } else {
+                // check children nodes
+                findEmptyFolders(node.children, emptyFolders);
+            }
+        }
+    }
+    return emptyFolders;
 }
