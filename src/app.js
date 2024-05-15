@@ -114,7 +114,6 @@ function displayBookmark(bookmarkNode) {
                     bookmarksDiv.appendChild(deleteFolderDiv);
 
                     // actual work is done here
-                    // fix me
                     deleteFolderBtnYes.addEventListener("click", async () => {
                         const bookmarkTreeNodes = await chrome.bookmarks.getTree();
                         const emptyFolders = findEmptyFolders(bookmarkTreeNodes);
