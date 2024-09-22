@@ -4,7 +4,7 @@
   "version": "1.1.0",
   "incognito": "not_allowed",
   "manifest_version": 3,
-  "description": "An extension to identify and remove duplicate favorites (a.k.a bookmarks) in Microsoft Edge web browser. Source code is available at: https://gokacinlar.github.io/Edge-Duplicate-Favorites-Remover-Extension/",
+  "description": "An extension to identify and remove duplicate favorites (a.k.a bookmarks) in Microsoft Edge web browser.",
   "icons": {
     "16": "icons/icon-16x16.png",
     "32": "icons/icon-32x32.png",
