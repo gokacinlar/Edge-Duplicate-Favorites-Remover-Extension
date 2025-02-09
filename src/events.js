@@ -18,6 +18,7 @@ export function createRemoveButton(bookmarkNode, listItem) {
     const removeButton = document.createElement("button");
     removeButton.className = buttonProperties.btnDangerSml;
     removeButton.innerText = "Remove duplicate";
+    removeButton.setAttribute("type", "button");
 
     removeButton.addEventListener("click", () => {
         etc.removeButtons.push(removeButton); // Add the remove button to the etc.removeButtons array
