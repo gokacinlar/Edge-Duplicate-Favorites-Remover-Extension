@@ -1,6 +1,8 @@
 <!--
   Duplicate Favorites Remover for Microsoft Edge Web Browser
-  Author: Derviş Öksüzoğlu
+  Author: Derviş Öksüzoğlu | 2025
+  License: MIT
+  You can support this extension buy buying me a coffee: buymeacoffee.com/gokacinlar
 -->
 
 <html lang="en">
@@ -14,26 +16,43 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-16x16.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-32x32.png">
   <!--End of favicon-->
+  <!--CSS-->
   <link rel="stylesheet" type="text/css" href="/lib/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/custom.css">
+  <!--End of CSS-->
 </head>
 
 <body id="documentBody" class="bg-dark text-white">
-  <main class="container col-12 w-100 py-3 px-3">
+  <main class="py-3 px-3">
     <div
-      class="p-3 d-flex flex-row gap-3 bd-highlight justify-content-center align-items-center border border-primary rounded">
-      <h1 class="text-break">Duplicate Favorites Remover for Microsoft Edge</h1>
+      class="p-3 d-flex flex-row gap-2 bd-highlight justify-content-start align-items-center border border-primary rounded">
+      <div class="d-flex flex-column gap-2 justify-content-between">
+        <div>
+          <h3 class="text-break">Duplicate Favorites Remover for Microsoft Edge</h3>
+        </div>
+        <div class="d-flex flex-row gap-2">
+          <a href="https://github.com/gokacinlar/Edge-Duplicate-Favorites-Remover-Extension"><img class="link-icons"
+              src="/icons/github.svg" alt="GitHub" title="GitHub"></a>
+          <a href="buymeacoffee.com/gokacinlar"><img class="link-icons" src="/icons/bag-heart-fill.svg"
+              alt="BuyMeACoffee" title="Donate / BuyMeACoffee"></a>
+        </div>
+      </div>
       <img class="img-fluid" src="/images/edge.png" alt="Microsoft Edge" title="Microsoft Edge">
     </div>
     <div
       class="mt-3 p-3 d-flex flex-row bd-highlight justify-content-center align-items-center border border-primary rounded">
-      <p>Click <span class="fw-bolder">"Get Favorites"</span> to display your current favorites/bookmarks.</p>
-      <button id="submit" class="btn btn-outline-primary btn-lg text-white width-100" type="button" value="submit">Get
-        Favorites</button>
+      <div>
+        <p>Click <span class="fw-bolder">"Get Favorites"</span> to display your current favorites/bookmarks.</p>
+      </div>
+      <div>
+        <button id="submit" class="btn btn-outline-primary btn-lg text-white width-100" type="button" value="submit"
+          title="Get Favorites">Get
+          Favorites</button>
+      </div>
     </div>
     <div
       class="mt-3 p-1 d-flex flex-column gap-3 bd-highlight justify-content-center align-items-center border border-primary rounded">
-      <p id="infoText" class="p-3 m-0">Your favorites/bookmarks will be visible here...</p>
+      <p id="infoText" class="w-100 p-2 fw-medium text-center m-0">Your favorites/bookmarks will be visible here...</p>
     </div>
     <div id="bookmarks" style="display: none !important;"
       class="mt-3 p-3 d-flex flex-column gap-3 bd-highlight justify-content-center align-items-center border border-primary rounded">
