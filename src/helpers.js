@@ -1,15 +1,14 @@
-import { sections, etc } from './static.js';
-import { stylingProperties, buttonProperties, actionProperties } from './styling.js';
+import { sections, etc, messages, stylingProperties, buttonProperties, actionProperties } from './static.js';
 import { handleDeleteFolderYes, handleEmptyFoldersAfterDeletion } from './events.js';
 
 export function updateInfoText(duplicateCount) {
     if (duplicateCount === 1) {
         sections.infoText.innerText = `${duplicateCount} duplicate has been found!`;
     } else if (duplicateCount === 0) {
-        sections.infoText.innerText = "No duplicates have been found!";
+        sections.infoText.innerText = messages.fail;
         sections.bookmarksDiv.remove();
     } else {
-        sections.infoText.innerText = `${duplicateCount} duplicates have been found.`;
+        sections.infoText.innerText = `${duplicateCount} ${messages.success}`;
     }
     scaleUpTop(sections.infoText);
 
@@ -38,6 +37,7 @@ export function cleanUpDuplicateLists() {
     document.documentElement.setAttribute("style", "height: fit-content !important;");
 }
 
+// handle the animation
 export function scaleUpTop(elem) {
     elem.classList.add("scale-up-top");
     elem.addEventListener("animationend", () => {
