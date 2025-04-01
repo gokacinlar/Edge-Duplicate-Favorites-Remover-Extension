@@ -1,5 +1,4 @@
-import { sections, etc } from './static.js';
-import { stylingProperties } from './styling.js';
+import { sections, etc, stylingProperties } from './static.js';
 import { isValidBookmark, createRemoveButton, } from './events.js';
 import { updateInfoText, disableButtons } from './helpers.js';
 
@@ -48,7 +47,7 @@ async function displayBookmarks(bookmarkNodes) {
 // Function to display actual bookmarks in the DOM
 async function displayBookmark(bookmarkNode) {
     const listItem = document.createElement("li");
-    listItem.className = stylingProperties.mainDiv;
+    listItem.className = "list-group-item bg-warning bg-gradient d-flex flex-row flex-grow-1 gap-2 justify-content-between align-items-center rounded bg-primary text-white border-0"
 
     if (bookmarkNode.url && etc.bookmarksUrls[bookmarkNode.url]) {
         etc.duplicateCount++; // Increment the number only if it's a duplicate
@@ -58,13 +57,19 @@ async function displayBookmark(bookmarkNode) {
         if (!etc.duplicateFolders[bookmarkNode.url]) {
             etc.duplicateFolders[bookmarkNode.url] = [];
         }
+
         let folderPath = await getFolderPath(bookmarkNode);
         // Remove the last ">" from the string output of parentId
         folderPath = folderPath.slice(0, -2);
         etc.duplicateFolders[bookmarkNode.url].push(folderPath);
 
         // Display the title and folder name
-        listItem.innerText = `${bookmarkNode.title} located in ${folderPath}`;
+        listItem.innerHTML = `
+        <div class="d-flex flex-column gap-1 text-black">
+            <p class="mx-0 my-0 fw-medium">${bookmarkNode.title}</p>
+            <p class="p-1 rounded bg-primary bg-gradient text-light mx-0 my-0">${folderPath}</p>
+        </div>
+        `;
 
         const removeButton = createRemoveButton(bookmarkNode, listItem);
         listItem.appendChild(removeButton);
