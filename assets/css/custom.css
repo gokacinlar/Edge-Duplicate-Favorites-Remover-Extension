@@ -1,22 +1,30 @@
 html {
-    height: fit-content !important;
+    height: fit-content;
+    /* Removed !important as it's generally best to avoid it */
 }
 
-#documentBody {
-    min-width: 512px;
-    height: fit-content;
-    text-wrap: pretty;
+:root {
+    --color-white: #fff5e3;
+    --color-black: #000000;
+}
+
+@layer init {
+    #documentBody {
+        min-width: 512px;
+        height: fit-content;
+        text-wrap: pretty;
+        overflow-wrap: break-word;
+    }
+
+    .link-icons {
+        width: 32px;
+        height: 32px;
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+    }
 }
 
 .animate-global {
-    -webkit-animation: fade 0.25s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
     animation: fade 0.25s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
-}
-
-@-webkit-keyframes fade {
-    50% {
-        opacity: 0;
-    }
 }
 
 @keyframes fade {
@@ -26,38 +34,17 @@ html {
 }
 
 .scale-up-top {
-    -webkit-animation: scale-up-top 0.25s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
     animation: scale-up-top 0.25s cubic-bezier(0.785, 0.135, 0.150, 0.860) both;
-}
-
-@-webkit-keyframes scale-up-top {
-    0% {
-        -webkit-transform: scale(0.5);
-        transform: scale(0.5);
-        -webkit-transform-origin: 50% 0%;
-        transform-origin: 50% 0%;
-    }
-
-    100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        -webkit-transform-origin: 50% 0%;
-        transform-origin: 50% 0%;
-    }
 }
 
 @keyframes scale-up-top {
     0% {
-        -webkit-transform: scale(0.5);
         transform: scale(0.5);
-        -webkit-transform-origin: 50% 0%;
         transform-origin: 50% 0%;
     }
 
     100% {
-        -webkit-transform: scale(1);
         transform: scale(1);
-        -webkit-transform-origin: 50% 0%;
         transform-origin: 50% 0%;
     }
 }
