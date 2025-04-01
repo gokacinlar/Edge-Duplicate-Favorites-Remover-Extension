@@ -1,5 +1,4 @@
-import { sections, etc } from './static.js';
-import { buttonProperties, actionProperties } from './styling.js';
+import { sections, etc, buttonProperties, actionProperties } from './static.js';
 import { isEmptyFolder, cleanUpDuplicateLists, createPopUpWarning, createPopUpButton, createDeleteFolderDiv } from './helpers.js';
 
 // Initialize etc.removeButtons array
@@ -17,8 +16,9 @@ export function isValidBookmark(bookmark) {
 export function createRemoveButton(bookmarkNode, listItem) {
     const removeButton = document.createElement("button");
     removeButton.className = buttonProperties.btnDangerSml;
-    removeButton.innerText = "Remove duplicate";
+    removeButton.innerHTML = `Remove<br>Duplicate`;
     removeButton.setAttribute("type", "button");
+    removeButton.setAttribute("title", "Remove duplicate")
 
     removeButton.addEventListener("click", () => {
         etc.removeButtons.push(removeButton); // Add the remove button to the etc.removeButtons array
@@ -30,7 +30,7 @@ export function createRemoveButton(bookmarkNode, listItem) {
 
 // Function to recursively search for empty bookmark/favorites folders
 export function findEmptyFolders(bookmarksTree, emptyFolders = []) {
-    for (const node of bookmarksTree) {
+    for (let node of bookmarksTree) {
         if (node.children) {
             if (isEmptyFolder(node)) {
                 emptyFolders.push(node);
