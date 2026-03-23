@@ -1,18 +1,18 @@
-# Edge Duplicate Favorites Remover Extension
-![Screenshot 1](images/main.png)
+# Handy Marky: Favorites (bookmarks) Editor
 
-This super simple extension for Microsoft Edge and Chromium-based browsers identifies duplicate bookmarks of users' index and removes them based on the duplicate URLs of the same favorite as well as extending the power of native remover by letting user choose to remove particular duplicates.
+This versatile web extension for Microsoft Edge and preferably Chromium-based browsers allows users to fully take control of their favorites/bookmarks and lets them;
 
-# Usage
-Extension is accessible in [here](https://microsoftedge.microsoft.com/addons/detail/duplicate-favorites-remov/oniadjdhgdpkafdjnmmbnecpcmmjjlfm).
++ See & analyze their favorites with detailed output
++ Do basic executions such as viewing, adding, deleting favorites
++ Do extensive executions such as importing, exporting, back-ups and more!
 
-In addition, if you want to run the extension locally, follow these steps:
+> This is a **complete rewrite** of the original and crappy "Edge Duplicate Favorites Remover" extension I just created while learning JavaScript. :3
 
-1. Clone the repository
-2. Unpack the extension by going in Edge:
-   - Manage Extensions > Turn on Developer Mode > Click "Load Unpacked"
-3. Enjoy!
+## Installation
 
-# Screenshots
-![Screenshot 2](images/first.png)
-![Screenshot 3](images/second.png)
+Currently I'm not listing this on Microsoft Edge Addon Store. To install locally, clone this repo and import the `public` folder from the Microsoft Edge Extensions settings by enabling the *"Developer Mode"*:
+
+```bash
+npm i
+npm run build
+```
