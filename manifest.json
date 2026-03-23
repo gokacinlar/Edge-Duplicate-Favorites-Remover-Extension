@@ -1,0 +1,54 @@
+{
+  "name": "Handy Marky: Favorites Editor",
+  "short_name": "Handy Marky",
+  "author": "Derviş Öksüzoğlu",
+  "version": "2.0.0",
+  "version_name": "build2",
+  "homepage_url": "https://github.com/gokacinlar/Edge-Duplicate-Favorites-Remover-Extension",
+  "incognito": "not_allowed",
+  "manifest_version": 3,
+  "description": "Powerful & comprehensive bookmark  editor for Microsoft Edge Web Browser",
+  "icons": {
+    "16": "assets/images/icons/logo_16x16.png",
+    "32": "assets/images/icons/logo_32x32.png",
+    "48": "assets/images/icons/logo_48x48.png",
+    "128": "assets/images/icons/logo_128x128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "/js/main.js"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "/js/worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Handy Marky: Favorites Editor",
+    "default_icon": {
+      "16": "assets/images/icons/logo_16x16.png",
+      "48": "assets/images/icons/logo_48x48.png",
+      "128": "assets/images/icons/logo_128x128.png"
+    }
+  },
+  "permissions": [
+    "bookmarks"
+  ],
+  "default_locale": "en",
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/images/icons/logo_1024x1024.png"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}

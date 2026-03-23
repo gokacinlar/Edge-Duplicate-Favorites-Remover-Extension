@@ -1,0 +1,10 @@
+{
+    "extensionName": {
+        "message": "Handy Marky: Favorites Editor",
+        "description": "Name of the extension."
+    },
+    "extensionDescription": {
+        "message": "Powerful & comprehensive bookmark  editor for Microsoft Edge Web Browser",
+        "description": "Description of the extension."
+    }
+}

@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "rootDir": "./src",
+    "baseUrl": "./src",
+    "outDir": "./public",
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": true,
+    "useDefineForClassFields": true,
+    "allowJs": true,
+    "checkJs": false,
+    "removeComments": true
+  },
+  "ts-node": {
+    "esm": true,
+    "transpileOnly": true,
+    "files": true
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "./node_modules",
+    "./public"
+  ],
+  "types": [
+    "./src/types/index.d.ts"
+  ],
+  "paths": {
+    "@types": [
+      "@types"
+    ]
+  }
+}
