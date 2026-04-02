@@ -8,8 +8,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserWebpackPlugin = require("terser-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-// ESLint
-const ESLintPlugin = require("eslint-webpack-plugin");
 // Manifest
 const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 
@@ -49,12 +47,9 @@ module.exports = {
                 },
             },
             {
-                test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/i,
-                type: "asset/resource",
-                generator: {
-                    filename: "assets/fonts/[name][ext]",
-                },
-            }
+                test: /\.htmx$/,
+                use: "htmx-loader",
+            },
         ],
     },
     output: {
@@ -113,7 +108,6 @@ module.exports = {
             }
         }),
         new CleanWebpackPlugin(),
-        new ESLintPlugin(),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, `./src/popup/popup.html`),
             filename: "./popup/popup.html",
