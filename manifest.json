@@ -28,6 +28,7 @@
     "service_worker": "/js/worker.js",
     "type": "module"
   },
+  "options_page": "options.html",
   "action": {
     "default_popup": "popup/popup.html",
     "default_title": "Handy Marky: Favorites Editor",
