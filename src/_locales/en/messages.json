@@ -1,10 +1,78 @@
 {
-    "extensionName": {
-        "message": "Handy Marky: Favorites Editor",
-        "description": "Name of the extension."
-    },
-    "extensionDescription": {
-        "message": "Powerful & comprehensive bookmark  editor for Microsoft Edge Web Browser",
-        "description": "Description of the extension."
-    }
+	"extensionName": {
+		"message": "Duplicate Favorites Remover",
+		"description": "Name of the extension."
+	},
+	"extensionDescription": {
+		"message": "An extension to identify and remove duplicate favorites (a.k.a bookmarks) in Microsoft Edge web browser.",
+		"description": "Description of the extension."
+	},
+	"getFavorites": {
+		"message": "Get Favorites",
+		"description": "Button text to get favorites"
+	},
+	"actionHint": {
+		"message": "Click <span class=\"fw-bolder\">\"Get Favorites\"</span> to display your current favorites/bookmarks.",
+		"description": "Hint text for user"
+	},
+	"infoInitial": {
+		"message": "Your favorites/bookmarks will be visible here...",
+		"description": "Initial info text"
+	},
+	"duplicatesFound": {
+		"message": "NaN duplicates have been found!",
+		"description": "Message when duplicates are found"
+	},
+	"oneDuplicateFound": {
+		"message": "1 duplicate has been found!",
+		"description": "Message when one duplicate is found"
+	},
+	"noDuplicates": {
+		"message": "No duplicates have been found.",
+		"description": "Message when no duplicates found"
+	},
+	"successDeletion": {
+		"message": "You have successfully deleted all the duplicate bookmarks!",
+		"description": "Success message after deletion"
+	},
+	"confirmDelete": {
+		"message": "This action cannot be undone. Do you wish to continue?",
+		"description": "Confirmation message before deletion"
+	},
+	"searchEmptyFolders": {
+		"message": "Do you want to search for empty folders?",
+		"description": "Prompt to search for empty folders"
+	},
+	"emptyFoldersRemoved": {
+		"message": "All empty folders have been removed!",
+		"description": "Message after empty folders are removed"
+	},
+	"noEmptyFolders": {
+		"message": "No empty folders have been found!",
+		"description": "Message when no empty folders found"
+	},
+	"removeDuplicate": {
+		"message": "Remove Duplicate",
+		"description": "Button text to remove duplicate"
+	},
+	"github": {
+		"message": "GitHub",
+		"description": "GitHub link text"
+	},
+	"support": {
+		"message": "Support",
+		"description": "Support link text"
+	},
+	"changeTheme": {
+		"message": "Change Theme",
+		"description": "Theme toggle tooltip"
+	},
+	"yes": {
+		"message": "Yes",
+		"description": "Yes button"
+	},
+	"no": {
+		"message": "No",
+		"description": "No button"
+	}
 }
