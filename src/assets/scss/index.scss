@@ -1,3 +1,6 @@
+@use "~flag-icons/sass/flag-icons.scss" with ($flag-icons-path: "~flag-icons/flags",
+    $flag-icons-included-countries: ("tr", "de", "fr", "us"));
+
 @mixin low-level-font-management($val1, $val2, $val3, $val4) {
     font-feature-settings: "#{$val1}",
     "#{$val2}",
@@ -81,7 +84,7 @@ html[data-theme="dark"] {
     font-size: $font-size;
 
     --color-primary-white: #FEF5EC;
-    --color-blue: #1C5770;
+    --color-blue: #119ad4;
     --color-blue-alt: #314752;
     --color-coffee: #4C3F33;
     --color-coffee-alt: #C8C6B7;
@@ -110,12 +113,26 @@ html[data-theme="dark"] {
     }
 
     #controlsArea {
-        @include upper-rounded-border-radius(16px !important);
+        @include upper-rounded-border-radius(22px !important);
+    }
+
+    .navbar-dropdown {
+        background: var(--color-bg) !important;
+        color: var(--color-fg) !important;
+    }
+
+    .lang-switch-list>li:nth-of-type(even) {
+        background-color: var(--color-coffee-alt) !important;
     }
 }
 
 @layer buttons {
-    .navbar-upper-right-action-button {
+    .bee-color-button {
+        @include val-with-important("background-color", var(--color-dark-yellow));
+        @include val-with-important("color", var(--color-dark));
+    }
+
+    .blue-color-button {
         @include val-with-important("background-color", var(--color-dark-yellow));
         @include val-with-important("color", var(--color-dark));
     }

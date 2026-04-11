@@ -1,3 +1,4 @@
+
 import type { LifecycleCallbacks } from "../../ts/interfaces/iFaces";
 import CreateTemplate from "../../utils/componentLogic";
 import { adjustThemeIconState } from "../../utils/helpers";
@@ -22,28 +23,52 @@ class NavBar extends HTMLElement implements LifecycleCallbacks {
     }
 
     private static navBarLayout(): string {
-        return /*html*/ `
+        return /*html*/`
             <nav class="navbar d-flex justify-content-end py-2">
                 <ul class="navbar-ul list-group list-group-flush w-100 d-flex flex-row align-items-center justify-content-end px-2 gap-1">
                     <li class="list-group-item m-0 p-0 border-0 rounded-pill">
-                        <app-nav-button
-                            id="changeLanguageButton"
-                            type="button"
-                            role="button"
-                            data-bs-toggle="tooltip" data-bs-title="Change Language"
-                            class="navbar-upper-right-action-button btn btn-sm rounded-pill">
-                            <i class="d-flex justify-content-center remix-icon-element ri-translate-2"></i>
-                        </app-nav-button>
+                        <app-dropdown class="dropstart">
+                            <app-button
+                                id="changeLanguageButton"
+                                type="button"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                class="bee-color-button btn btn-sm rounded-pill dropdown-toggle
+                                    d-flex flex-row align-items-center justify-content-center shadow-sm">
+                                <i class="d-flex justify-content-center remix-icon-element ri-translate-2"></i>
+                            </app-button>
+                            <ul class="lang-switch-list navbar-dropdown dropdown-menu rounded-4 shadow-sm">
+                                <li class="dropdown-item"><span class="fi fi-us"></span> English</li>
+                                <li class="dropdown-item"><span class="fi fi-de"></span> Deutsch</li>
+                                <li class="dropdown-item"><span class="fi fi-fr"></span> French</li>
+                                <li class="dropdown-item"><span class="fi fi-tr"></span> Türkçe</li>
+                            </ul>
+                        </app-dropdown>
                     </li>
-                    <li>
-                        <app-nav-button
+                    <li class="list-group-item m-0 p-0 border-0 rounded-pill">
+                        <app-button
                             id="changeThemeButton"
                             type="button"
                             role="button"
                             data-bs-toggle="tooltip" data-bs-title="Change Theme"
-                            class="navbar-upper-right-action-button btn btn-sm rounded-pill theme-switch-toggle-icon">
+                            class="bee-color-button btn btn-sm rounded-pill theme-switch-toggle-icon shadow-sm">
                             <i class="d-flex justify-content-center remix-icon-element ri-moon-line"></i>
-                        </app-nav-button>
+                        </app-button>
+                    </li>
+                    <li class="list-group-item m-0 p-0 border-0 rounded-pill">
+                        <app-button
+                            data-bs-toggle="tooltip" data-bs-title="GitHub"
+                            class="bee-color-button btn btn-sm rounded-pill theme-switch-toggle-icon shadow-sm">
+                            <i class="d-flex justify-content-center remix-icon-element ri-github-line"></i>
+                        </app-button>
+                    </li>
+                    <li class="list-group-item m-0 p-0 border-0 rounded-pill">
+                        <app-button
+                            data-bs-toggle="tooltip" data-bs-title="BuyMeACoffee"
+                            class="bee-color-button btn btn-sm rounded-pill theme-switch-toggle-icon shadow-sm">
+                            <i class="d-flex justify-content-center remix-icon-element ri-cup-line"></i>
+                        </app-button>
                     </li>
                 </ul>
             </nav>
