@@ -1,25 +1,20 @@
-// Assets (bootstrap, fonts, images etc.)
-import "./assets/assets";
 // Interfaces
-import "./ts/interfaces/iFaces";
+import type { LifecycleCallbacks } from "./ts/interfaces/iFaces";
 // Components
 import "./components/Components";
 // Service Worker
 import "./worker";
+// *** APP ***
+import "./app/Root";
+// Assets (bootstrap, fonts, images etc.)
+import "./assets/assets";
+// Utilities
+import "./utils/bootstrapRelated";
 
-class Main extends HTMLElement implements LifecycleCallbacks {
-    constructor() {
-        super();
-    }
-
-    connectedCallback() {
-
-    }
-
-    disconnectedCallback() {
-
-    }
+class Main implements LifecycleCallbacks {
+	attributeChangedCallback(): void { }
+	connectedCallback(): void { }
+	disconnectedCallback(): void { }
 }
 
 export default Main;
-customElements.define("medge-bm-main", Main);
