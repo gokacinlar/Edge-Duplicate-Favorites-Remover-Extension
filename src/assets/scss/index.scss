@@ -1,0 +1,129 @@
+@mixin low-level-font-management($val1, $val2, $val3, $val4) {
+    font-feature-settings: "#{$val1}",
+    "#{$val2}",
+    "#{$val3}",
+    "#{$val4}";
+
+    -moz-font-feature-settings: "#{$val1}",
+    "#{$val2}",
+    "#{$val3}",
+    "#{$val4}";
+
+    -webkit-font-feature-settings: "#{$val1}",
+    "#{$val2}",
+    "#{$val3}",
+    "#{$val4}";
+}
+
+@mixin val-with-important($prop, $value) {
+    #{$prop}: #{$value} !important;
+}
+
+@mixin navbar-elements-colors() {
+    color: var(--color-coffee-alt) !important;
+    background: var(--color-coffee) !important;
+}
+
+@mixin define-default-dimension {
+    width: 512px;
+    height: 600px;
+}
+
+@mixin upper-rounded-border-radius($val) {
+    -webkit-border-top-left-radius: #{$val};
+    -webkit-border-top-right-radius: #{$val};
+    border-top-left-radius: #{$val};
+    border-top-right-radius: #{$val};
+}
+
+@font-face {
+    font-family: "Vollkorn";
+    src: url("../fonts/woff2/Vollkorn-VariableFont_wght.woff2") format("woff2") local("Vollkorn");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+$font-family: "Vollkorn";
+$font-size: 16px;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: $font-family;
+    @include low-level-font-management("kern", "liga", "clig", "calt");
+    font-kerning: normal;
+    text-rendering: optimizeLegibility;
+    font-variant: no-common-ligatures proportional-nums;
+}
+
+html[data-theme="light"] {
+    --color-bg: #FEF5EC !important;
+    --color-fg: #000000 !important;
+}
+
+html[data-theme="dark"] {
+    --color-bg: #363636 !important;
+    --color-fg: #FEF5EC !important;
+}
+
+:root {
+    font-size: $font-size;
+
+    --color-primary-white: #FEF5EC;
+    --color-blue: #1C5770;
+    --color-blue-alt: #314752;
+    --color-coffee: #4C3F33;
+    --color-coffee-alt: #C8C6B7;
+    --color-dark: #23201F;
+    --color-orange: #9C5C35;
+    --color-dark-yellow: #FFC107;
+}
+
+@layer primary {
+    body {
+        @include define-default-dimension();
+        text-wrap: pretty;
+        overflow-wrap: break-word;
+    }
+
+    #mainRoot {
+        background: var(--color-bg);
+        color: var(--color-fg);
+    }
+
+    aside,
+    app-navbar,
+    #controlsArea {
+        @include val-with-important("background-color", var(--color-dark));
+        @include val-with-important("color", var(--color-primary-white));
+    }
+
+    #controlsArea {
+        @include upper-rounded-border-radius(16px !important);
+    }
+}
+
+@layer buttons {
+    .navbar-upper-right-action-button {
+        @include val-with-important("background-color", var(--color-dark-yellow));
+        @include val-with-important("color", var(--color-dark));
+    }
+}
+
+@layer icons {
+    .remix-icon-element {
+        width: 22px;
+        font-size: calc($font-size + .15rem);
+    }
+}
