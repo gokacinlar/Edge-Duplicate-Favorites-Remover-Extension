@@ -33,6 +33,7 @@
     "./public"
   ],
   "types": [
+    "chrome",
     "./src/types/index.d.ts"
   ],
   "paths": {
