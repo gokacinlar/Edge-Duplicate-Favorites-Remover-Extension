@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "rootDir": "./src",
-    "baseUrl": "./src",
     "outDir": "./public",
     "target": "esnext",
     "module": "esnext",
