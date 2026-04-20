@@ -1,3 +1,4 @@
+@use "globals.scss";
 @use "~flag-icons/sass/flag-icons.scss" with ($flag-icons-path: "~flag-icons/flags",
     $flag-icons-included-countries: ("tr", "de", "fr", "us"));
 
@@ -63,6 +64,8 @@ html {
     -webkit-font-smoothing: antialiased;
     background-color: var(--color-bg);
     color: var(--color-fg);
+    transition: all .15s ease-in-out;
+    /* Fonts */
     font-family: $font-family;
     @include low-level-font-management("kern", "liga", "clig", "calt");
     font-kerning: normal;
@@ -103,6 +106,7 @@ html[data-theme="dark"] {
     #mainRoot {
         background: var(--color-bg);
         color: var(--color-fg);
+        transition: background-color .25s ease, color .25s ease;
     }
 
     aside,
@@ -121,8 +125,25 @@ html[data-theme="dark"] {
         color: var(--color-fg) !important;
     }
 
-    .lang-switch-list>li:nth-of-type(even) {
-        background-color: var(--color-coffee-alt) !important;
+    .lang-switch-list {
+        border: 1px solid var(--color-blue-alt) !important;
+
+        &>li:nth-of-type(even) {
+            background-color: var(--color-coffee-alt) !important;
+        }
+
+        &>li:nth-of-type(odd) {
+            color: var(--color-fg) !important;
+        }
+
+        &>li:nth-last-of-type(odd):hover {
+            color: var(--color-bg) !important;
+            background-color: var(--color-coffee-alt) !important;
+        }
+    }
+
+    .lang-switch-list>li {
+        cursor: pointer;
     }
 }
 

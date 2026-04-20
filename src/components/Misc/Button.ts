@@ -7,7 +7,7 @@ class Button extends HTMLElement implements LifecycleCallbacks {
 	private _originalInnerHTML: string | null = null;
 
 	public static observedAttributes = [
-		"class", "href", "type", "role", "title", "hasText", "isExpandable"
+		"class", "href", "type", "role", "title", "hasText", "isExpandable", "target"
 	];
 
 	private create(): HTMLElement {
@@ -26,6 +26,7 @@ class Button extends HTMLElement implements LifecycleCallbacks {
 		const role = this.getAttribute("role");
 		const title = this.getAttribute("title");
 		const hasText = this.getAttribute("hasText");
+		const target = this.getAttribute("target");
 		// Element props
 		try {
 			const button = this.create();
@@ -35,12 +36,40 @@ class Button extends HTMLElement implements LifecycleCallbacks {
 			if (type) button.setAttribute("type", type);
 			if (role) button.setAttribute("role", role);
 			if (href) button.setAttribute("href", href);
+			if (target) button.setAttribute("target", target);
 			if (hasText) {
 				const original = this._originalInnerHTML ?? button.innerHTML;
 				button.innerHTML = hasText + original;
 			};
 		} catch (error: unknown) {
 			throw new Error(`Error while creating class element: ${error}`);
+		}
+	}
+
+	// Handle redirection of links
+	private handleLinkClick(): void {
+		const type = this.getAttribute("type");
+		const href = this.getAttribute("href");
+		const target = this.getAttribute("target");
+
+		if (type === "link" && href) {
+			window.open(href, target || "_self");
+		}
+	}
+
+	// Redirect users to desired URL specified in "href"
+	private setupLinkBehavior(): void {
+		const type = this.getAttribute("type");
+		if (type === "link") {
+			this.style.cursor = "pointer";
+			this.addEventListener("click", () => this.handleLinkClick());
+			// Handle keyboard events
+			this.addEventListener("keydown", (event: KeyboardEvent) => {
+				if (event.key === "Enter") {
+					event.preventDefault();
+					this.handleLinkClick();
+				}
+			});
 		}
 	}
 
@@ -61,6 +90,7 @@ class Button extends HTMLElement implements LifecycleCallbacks {
 				this.appendChild(button);
 			}
 
+			this.setupLinkBehavior();
 			this._isSetUp = true;
 		}
 

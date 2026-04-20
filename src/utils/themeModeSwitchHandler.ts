@@ -50,10 +50,22 @@ class ThemeManager {
 	}
 
 	private applyTheme(): void {
+		this.handleTransitionEffect();
 		const theme = this.getCurrentThemeFromLocalStorage();
 		document.documentElement.setAttribute("data-theme", theme);
 		this.handleThemeSwitchingButtonIconState();
 		this.dispatchThemeChangeEvent(theme);
+	}
+
+	private handleTransitionEffect(): void {
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+		const el: HTMLElement = document.body;
+		el.style.transition = "background-color .15s ease, color .15s ease";
+
+		requestAnimationFrame(() => {
+			requestAnimationFrame(() => (el.style.transition = ""));
+		});
 	}
 
 	private setupMediaQueryListener(): void {
@@ -104,6 +116,7 @@ class ThemeManager {
 
 	public setTheme(theme: string): void {
 		try {
+			this.handleTransitionEffect();
 			localStorage.setItem(this.storageKey, theme);
 			document.documentElement.setAttribute("data-theme", theme);
 			this.handleThemeSwitchingButtonIconState();
@@ -112,6 +125,7 @@ class ThemeManager {
 			console.error(`Error while setting theme: ${error}`);
 		}
 	}
+
 
 	public getTheme(): string {
 		return this.getCurrentThemeFromLocalStorage();

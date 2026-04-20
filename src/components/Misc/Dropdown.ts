@@ -50,13 +50,15 @@ class DropDown extends HTMLElement implements LifecycleCallbacks {
 
 class DropDownButton extends DropDown implements LifecycleCallbacks {
     private dropDownButtonElement: HTMLElement | null = null;
+    private _originalInnerHTML: string | null = null;
     public static observedAttributes = [
-        "class", "type", "data-bs-toggle", "aria-expanded"
+        "class", "type", "data-bs-toggle", "aria-expanded", "hasText"
     ];
 
     create(): HTMLElement {
         if (!this.dropDownButtonElement) {
             this.dropDownButtonElement = createClassElement<HTMLElement>(this, HTMLElement) || document.createElement("button");
+            this._originalInnerHTML = this.dropDownButtonElement.innerHTML;
         }
         return this.dropDownButtonElement;
     }
@@ -66,13 +68,18 @@ class DropDownButton extends DropDown implements LifecycleCallbacks {
         const type = this.getAttribute("type");
         const dataBsToggle = this.getAttribute("data-bs-toggle");
         const ariaExpanded = this.getAttribute("aria-expanded");
+        const hasText = this.getAttribute("hasText");
 
         try {
-            const div = this.create();
-            if (className) div.className = className;
-            if (type) div.setAttribute("type", type);
-            if (dataBsToggle) div.setAttribute("data-bs-toggle", "dropdown");
-            if (ariaExpanded) div.setAttribute("aria-expanded", "false");
+            const button = this.create();
+            if (className) button.className = className;
+            if (type) button.setAttribute("type", type);
+            if (dataBsToggle) button.setAttribute("data-bs-toggle", "dropdown");
+            if (ariaExpanded) button.setAttribute("aria-expanded", "false");
+            if (hasText) {
+                const original = this._originalInnerHTML ?? button.innerHTML;
+                button.innerHTML = hasText + original;
+            };
         } catch (error: unknown) {
             throw new Error(`Error while creating class element: ${error}`);
         }
@@ -85,3 +92,4 @@ class DropDownButton extends DropDown implements LifecycleCallbacks {
 
 export default DropDown;
 customElements.define("app-dropdown", DropDown);
+customElements.define("app-dropdown-button", DropDownButton);
