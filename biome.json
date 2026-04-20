@@ -24,7 +24,8 @@
 							"assert",
 							"error",
 							"info",
-							"warn"
+							"warn",
+							"clear"
 						]
 					}
 				}
