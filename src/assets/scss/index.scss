@@ -128,15 +128,15 @@ html[data-theme="dark"] {
     .lang-switch-list {
         border: 1px solid var(--color-blue-alt) !important;
 
-        &>li:nth-of-type(even) {
+        &>li>.lang-switch-btn:nth-of-type(even) {
             background-color: var(--color-coffee-alt) !important;
         }
 
-        &>li:nth-of-type(odd) {
+        &>li>.lang-switch-btn:nth-of-type(odd) {
             color: var(--color-fg) !important;
         }
 
-        &>li:nth-last-of-type(odd):hover {
+        &>li>.lang-switch-btn:nth-last-of-type(odd):hover {
             color: var(--color-bg) !important;
             background-color: var(--color-coffee-alt) !important;
         }
