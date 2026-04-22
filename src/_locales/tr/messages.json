@@ -1,78 +1,25 @@
 {
-	"extensionName": {
-		"message": "Yinelenen Favorileri Kaldırıcı",
-		"description": "Name of the extension."
-	},
-	"extensionDescription": {
-		"message": "Microsoft Edge web tarayıcısında yinelenen favorileri (yer imlerini) tanımlamaya ve kaldırmaya yönelik bir eklenti.",
-		"description": "Description of the extension."
-	},
-	"getFavorites": {
-		"message": "Favorileri Getir",
-		"description": "Button text to get favorites"
-	},
-	"actionHint": {
-		"message": "Mevcut favorilerinizi/sigma yer imlerinizi görüntülemek için <span class=\"fw-bolder\">\"Favorileri Getir\"</span> düğmesine tıklayın.",
-		"description": "Hint text for user"
-	},
-	"infoInitial": {
-		"message": "Favorileriniz/sigma yer imleriniz burada görünecek...",
-		"description": "Initial info text"
-	},
-	"duplicatesFound": {
-		"message": "NaN tane yinelenen favoriler bulundu!",
-		"description": "Message when duplicates are found"
-	},
-	"oneDuplicateFound": {
-		"message": "1 tane yinelenen favori bulundu!",
-		"description": "Message when one duplicate is found"
-	},
-	"noDuplicates": {
-		"message": "Yinelenen favori bulunamadı.",
-		"description": "Message when no duplicates found"
-	},
-	"successDeletion": {
-		"message": "Tüm yinelenen yer imlerini başarıyla sildiniz!",
-		"description": "Success message after deletion"
-	},
-	"confirmDelete": {
-		"message": "Bu işlem geri alınamaz. Devam etmek istiyor musunuz?",
-		"description": "Confirmation message before deletion"
-	},
-	"searchEmptyFolders": {
-		"message": "Boş klasörleri aramak ister misiniz?",
-		"description": "Prompt to search for empty folders"
-	},
-	"emptyFoldersRemoved": {
-		"message": "Tüm boş klasörler kaldırıldı!",
-		"description": "Message after empty folders are removed"
-	},
-	"noEmptyFolders": {
-		"message": "Boş klasör bulunamadı!",
-		"description": "Message when no empty folders found"
-	},
-	"removeDuplicate": {
-		"message": "Yineleneni Kaldır",
-		"description": "Button text to remove duplicate"
-	},
-	"github": {
-		"message": "GitHub",
-		"description": "GitHub link text"
-	},
-	"support": {
-		"message": "Destek",
-		"description": "Support link text"
-	},
-	"changeTheme": {
-		"message": "Temayı Değiştir",
-		"description": "Theme toggle tooltip"
-	},
-	"yes": {
-		"message": "Evet",
-		"description": "Yes button"
-	},
-	"no": {
-		"message": "Hayır",
-		"description": "No button"
-	}
+	"extensionName": "Yinelenen Favorileri Kaldırıcı",
+	"extensionDescription": "Microsoft Edge web tarayıcısında yinelenen favorileri (yer imlerini) tanımlamaya ve kaldırmaya yönelik bir eklenti.",
+	"notByAiMessage": "Bu eklenti ağırlıklı olarak bir insan tarafından yapılmıştır.",
+	"getFavorites": "Favorileri Getir",
+	"actionHint": "Mevcut favorilerinizi/sigma yer imlerinizi görüntülemek için <span class=\"fw-bolder\">\"Favorileri Getir\"</span> düğmesine tıklayın.",
+	"infoInitial": "Favorileriniz/sigma yer imleriniz burada görünecek...",
+	"duplicatesFound": "NaN tane yinelenen favoriler bulundu!",
+	"oneDuplicateFound": "1 tane yinelenen favori bulundu!",
+	"noDuplicates": "Yinelenen favori bulunamadı.",
+	"successDeletion": "Tüm yinelenen yer imlerini başarıyla sildiniz!",
+	"confirmDelete": "Bu işlem geri alınamaz. Devam etmek istiyor musunuz?",
+	"searchEmptyFolders": "Boş klasörleri aramak ister misiniz?",
+	"emptyFoldersRemoved": "Tüm boş klasörler kaldırıldı!",
+	"noEmptyFolders": "Boş klasör bulunamadı!",
+	"removeDuplicate": "Yineleneni Kaldır",
+	"github": "GitHub",
+	"support": "Destek",
+	"changeTheme": "Temayı Değiştir",
+	"yes": "Evet",
+	"no": "Hayır",
+	"tools": "Araçlar",
+	"bulkActions": "Toplu İşlemler",
+	"expandMenu": "Menüyü Genişlet"
 }

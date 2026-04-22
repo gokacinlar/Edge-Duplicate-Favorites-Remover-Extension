@@ -1,63 +1,89 @@
 export interface LifecycleCallbacks {
-    attributeChangedCallback(
-        name?: string,
-        oldValue?: string,
-        newValue?: string,
-    ): void;
-    connectedCallback(): void;
-    disconnectedCallback(): void;
+	attributeChangedCallback(
+		name?: string,
+		oldValue?: string,
+		newValue?: string,
+	): void;
+	connectedCallback(): void;
+	disconnectedCallback(): void;
 }
 
 export interface BookmarkTreeNode {
-    id?: string;
-    parentId?: string;
-    index?: number;
-    title?: string;
-    url?: string;
-    dateAdded?: number;
-    dateGroupModified?: number;
-    unmodifiable?: string;
-    children?: BookmarkTreeNode[];
+	id?: string;
+	parentId?: string;
+	index?: number;
+	title?: string;
+	url?: string;
+	dateAdded?: number;
+	dateGroupModified?: number;
+	unmodifiable?: string;
+	children?: BookmarkTreeNode[];
 }
 
 export interface BookmarkState {
-    duplicateCount: number;
-    bookmarksUrls: Record<string, boolean>;
-    duplicateFolders: Record<string, string[]>;
-    removeButtons: HTMLButtonElement[];
+	duplicateCount: number;
+	bookmarksUrls: Record<string, boolean>;
+	duplicateFolders: Record<string, string[]>;
+	removeButtons: HTMLButtonElement[];
 }
 
 export interface SectionElements {
-    submitBtn: HTMLButtonElement | null;
-    infoText: HTMLElement | null;
-    bookmarksDiv: HTMLElement | null;
+	submitBtn: HTMLButtonElement | null;
+	infoText: HTMLElement | null;
+	bookmarksDiv: HTMLElement | null;
 }
 
 export interface StylingProperties {
-    mainDiv: string;
-    foundFavDiv: string;
-    basicDiv: string;
-    wrapperDiv: string;
+	mainDiv: string;
+	foundFavDiv: string;
+	basicDiv: string;
+	wrapperDiv: string;
 }
 
 export interface ButtonProperties {
-    yesBtn: string;
-    noBtn: string;
-    btnDangerSml: string;
-    btnDangerLg: string;
+	yesBtn: string;
+	noBtn: string;
+	btnDangerSml: string;
+	btnDangerLg: string;
 }
 
 export interface ActionMessages {
-    confirm: string;
-    success: string;
-    successDeletionFolder: string;
-    searchEmptyFolder: string;
-    emptyFoldersFalse: string;
+	confirm: string;
+	success: string;
+	successDeletionFolder: string;
+	searchEmptyFolder: string;
+	emptyFoldersFalse: string;
 }
 
 export interface InfoMessages {
-    found: string;
-    notFound: string;
-    foundOne: string;
-    foundMultiple: string;
+	found: string;
+	notFound: string;
+	foundOne: string;
+	foundMultiple: string;
 }
+
+// i18next Translation Keys
+export type TranslationKey =
+	| "extensionName"
+	| "extensionDescription"
+	| "notByAiMessage"
+	| "getFavorites"
+	| "actionHint"
+	| "infoInitial"
+	| "duplicatesFound"
+	| "oneDuplicateFound"
+	| "noDuplicates"
+	| "successDeletion"
+	| "confirmDelete"
+	| "searchEmptyFolders"
+	| "emptyFoldersRemoved"
+	| "noEmptyFolders"
+	| "removeDuplicate"
+	| "github"
+	| "support"
+	| "changeTheme"
+	| "yes"
+	| "no"
+	| "tools"
+	| "bulkActions"
+	| "expandMenu";

@@ -1,78 +1,25 @@
 {
-	"extensionName": {
-		"message": "Supprimeur de Favoris en Double",
-		"description": "Name of the extension."
-	},
-	"extensionDescription": {
-		"message": "Une extension pour identifier et supprimer les favoris en double (a.k.a signets) dans le navigateur Web Microsoft Edge.",
-		"description": "Description of the extension."
-	},
-	"getFavorites": {
-		"message": "Obtenir les favoris",
-		"description": "Button text to get favorites"
-	},
-	"actionHint": {
-		"message": "Cliquez sur <span class=\"fw-bolder\">\"Obtenir les favoris\"</span> pour afficher vos favoris/signets actuels.",
-		"description": "Hint text for user"
-	},
-	"infoInitial": {
-		"message": "Vos favoris/signets seront visibles ici...",
-		"description": "Initial info text"
-	},
-	"duplicatesFound": {
-		"message": "NaN doublons trouvés!",
-		"description": "Message when duplicates are found"
-	},
-	"oneDuplicateFound": {
-		"message": "1 doublon trouvé!",
-		"description": "Message when one duplicate is found"
-	},
-	"noDuplicates": {
-		"message": "Aucun doublon trouvé.",
-		"description": "Message when no duplicates found"
-	},
-	"successDeletion": {
-		"message": "Vous avez réussi à supprimer tous les signets en double!",
-		"description": "Success message after deletion"
-	},
-	"confirmDelete": {
-		"message": "Cette action ne peut pas être annulée. Voulez-vous continuer?",
-		"description": "Confirmation message before deletion"
-	},
-	"searchEmptyFolders": {
-		"message": "Voulez-vous rechercher des dossiers vides?",
-		"description": "Prompt to search for empty folders"
-	},
-	"emptyFoldersRemoved": {
-		"message": "Tous les dossiers vides ont été supprimés!",
-		"description": "Message after empty folders are removed"
-	},
-	"noEmptyFolders": {
-		"message": "Aucun dossier vide trouvé!",
-		"description": "Message when no empty folders found"
-	},
-	"removeDuplicate": {
-		"message": "Supprimer le doublon",
-		"description": "Button text to remove duplicate"
-	},
-	"github": {
-		"message": "GitHub",
-		"description": "GitHub link text"
-	},
-	"support": {
-		"message": "Soutien",
-		"description": "Support link text"
-	},
-	"changeTheme": {
-		"message": "Changer le thème",
-		"description": "Theme toggle tooltip"
-	},
-	"yes": {
-		"message": "Oui",
-		"description": "Yes button"
-	},
-	"no": {
-		"message": "Non",
-		"description": "No button"
-	}
+	"extensionName": "Supprimeur de Favoris en Double",
+	"extensionDescription": "Une extension pour identifier et supprimer les favoris en double (a.k.a signets) dans le navigateur Web Microsoft Edge.",
+	"notByAiMessage": "Cette extension est principalement réalisée par un humain.",
+	"getFavorites": "Obtenir les favoris",
+	"actionHint": "Cliquez sur <span class=\"fw-bolder\">\"Obtenir les favoris\"</span> pour afficher vos favoris/signets actuels.",
+	"infoInitial": "Vos favoris/signets seront visibles ici...",
+	"duplicatesFound": "NaN doublons trouvés!",
+	"oneDuplicateFound": "1 doublon trouvé!",
+	"noDuplicates": "Aucun doublon trouvé.",
+	"successDeletion": "Vous avez réussi à supprimer tous les signets en double!",
+	"confirmDelete": "Cette action ne peut pas être annulée. Voulez-vous continuer?",
+	"searchEmptyFolders": "Voulez-vous rechercher des dossiers vides?",
+	"emptyFoldersRemoved": "Tous les dossiers vides ont été supprimés!",
+	"noEmptyFolders": "Aucun dossier vide trouvé!",
+	"removeDuplicate": "Supprimer le doublon",
+	"github": "GitHub",
+	"support": "Soutien",
+	"changeTheme": "Changer le thème",
+	"yes": "Oui",
+	"no": "Non",
+	"tools": "Outils",
+	"bulkActions": "Actions groupées",
+	"expandMenu": "Développer le menu"
 }
