@@ -1,4 +1,4 @@
-
+import Localize from "../../i18n";
 import type { LifecycleCallbacks } from "../../ts/interfaces/iFaces";
 import CreateTemplate from "../../utils/componentLogic";
 import { adjustThemeIconState } from "../../utils/helpers";
@@ -23,7 +23,7 @@ class NavBar extends HTMLElement implements LifecycleCallbacks {
     }
 
     private static navBarLayout(): string {
-        return /*html*/`
+        return /*html*/ `
             <nav class="navbar d-flex flex-row align-items-center justify-content-between py-2">
                 <app-button
                     type="link"
@@ -49,11 +49,51 @@ class NavBar extends HTMLElement implements LifecycleCallbacks {
                                 <i class="d-flex justify-content-center remix-icon-element ri-translate-2"></i>
                             </app-dropdown-button>
                             <ul class="lang-switch-list navbar-dropdown dropdown-menu rounded-4 shadow-sm">
-                                <li data-language="en" class="dropdown-item"><span class="fi fi-us"></span> English</li>
-                                <li data-language="de"  class="dropdown-item"><span class="fi fi-de"></span> Deutsch</li>
-                                <li data-language="fr" class="dropdown-item"><span class="fi fi-fr"></span> French</li>
-                                <li data-language="es" class="dropdown-item"><span class="fi fi-es"></span> Spanish</li>
-                                <li data-language="tr" class="dropdown-item"><span class="fi fi-tr"></span> Türkçe</li>
+                                    <li class="dropdown-item p-0 m-0 rounded-2">
+                                        <app-button
+                                            class="lang-switch-btn btn btn-sm rounded-2 w-100 fs-6 d-flex flex-row-reverse align-items-center justify-content-end"
+                                            data-language="en"
+                                            hasText="English"
+                                            >
+                                            <span class="fi fi-us"></span>
+                                        </app-button>
+                                    </li>
+                                    <li class="dropdown-item p-0 m-0 rounded-2">
+                                        <app-button
+                                            class="lang-switch-btn btn btn-sm rounded-2 w-100 fs-6 d-flex flex-row-reverse align-items-center justify-content-end"
+                                            data-language="de"
+                                            hasText="Deutsch"
+                                            >
+                                            <span class="fi fi-de"></span>
+                                        </app-button>
+                                    </li>
+                                    <li class="dropdown-item p-0 m-0 rounded-2">
+                                        <app-button
+                                            class="lang-switch-btn btn btn-sm rounded-2 w-100 fs-6 d-flex flex-row-reverse align-items-center justify-content-end"
+                                            data-language="fr"
+                                            hasText="French"
+                                            >
+                                            <span class="fi fi-fr"></span></li>
+                                        </app-button>
+                                    </li>
+                                    <li class="dropdown-item p-0 m-0 rounded-2">
+                                        <app-button
+                                            class="lang-switch-btn btn btn-sm rounded-2 w-100 fs-6 d-flex flex-row-reverse align-items-center justify-content-end"
+                                            data-language="es"
+                                            hasText="Spanish"
+                                            >
+                                            <span class="fi fi-es"></span></li>
+                                        </app-button>
+                                    </li>
+                                    <li class="dropdown-item p-0 m-0 rounded-2">
+                                        <app-button
+                                            class="lang-switch-btn btn btn-sm rounded-2 w-100 fs-6 d-flex flex-row-reverse align-items-center justify-content-end"
+                                            data-language="tr"
+                                            hasText="Turkish"
+                                            >
+                                            <span class="fi fi-tr"></span></li>
+                                        </app-button>
+                                    </li>
                             </ul>
                         </app-dropdown>
                     </li>
@@ -62,7 +102,7 @@ class NavBar extends HTMLElement implements LifecycleCallbacks {
                             id="changeThemeButton"
                             type="button"
                             role="button"
-                            data-bs-toggle="tooltip" data-bs-title="Change Theme"
+                            data-bs-toggle="tooltip" data-bs-title="${Localize.translate("changeTheme")}"
                             class="bee-color-button btn btn-sm rounded-pill theme-switch-toggle-icon shadow-sm">
                             <i class="d-flex justify-content-center remix-icon-element ri-moon-line"></i>
                         </app-button>
@@ -72,7 +112,7 @@ class NavBar extends HTMLElement implements LifecycleCallbacks {
                             type="link"
                             role="link"
                             target="_blank" href="https://github.com/gokacinlar"
-                            data-bs-toggle="tooltip" data-bs-title="GitHub"
+                            data-bs-toggle="tooltip" data-bs-title="${Localize.translate("github")}"
                             class="bee-color-button btn btn-sm rounded-pill theme-switch-toggle-icon shadow-sm">
                             <i class="d-flex justify-content-center remix-icon-element ri-github-line"></i>
                         </app-button>
@@ -82,7 +122,7 @@ class NavBar extends HTMLElement implements LifecycleCallbacks {
                             type="link"
                             role="link"
                             target="_blank" href="https://buymeacoffee.com/gokacinlar"
-                            data-bs-toggle="tooltip" data-bs-title="BuyMeACoffee"
+                            data-bs-toggle="tooltip" data-bs-title="${Localize.translate("support")}"
                             class="bee-color-button btn btn-sm rounded-pill theme-switch-toggle-icon shadow-sm">
                             <i class="d-flex justify-content-center remix-icon-element ri-cup-line"></i>
                         </app-button>
@@ -96,7 +136,12 @@ class NavBar extends HTMLElement implements LifecycleCallbacks {
         const iconEl = this.querySelector(".theme-switch-toggle-icon i");
         if (iconEl) {
             const theme = ThemeManager.getInstance().getTheme();
-            adjustThemeIconState(iconEl as HTMLElement, theme, "ri-moon-line", "ri-sun-line",);
+            adjustThemeIconState(
+                iconEl as HTMLElement,
+                theme,
+                "ri-moon-line",
+                "ri-sun-line",
+            );
         }
     }
 

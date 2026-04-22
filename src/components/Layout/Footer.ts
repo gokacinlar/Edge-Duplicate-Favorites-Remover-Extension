@@ -1,4 +1,4 @@
-
+import Localize from "../../i18n";
 import type { LifecycleCallbacks } from "../../ts/interfaces/iFaces";
 import CreateTemplate from "../../utils/componentLogic";
 
@@ -9,7 +9,7 @@ class Footer extends HTMLElement implements LifecycleCallbacks {
     }
 
     private static footerLayout(): string {
-        return /*html*/`
+        return /*html*/ `
             <section id="footer">
                 <div id="controlsArea" class="d-flex flex-row align-items-center justify-content-evenly gap-1
                     flex-grow-0 w-100 px-2 py-2 shadow-sm">
@@ -17,7 +17,7 @@ class Footer extends HTMLElement implements LifecycleCallbacks {
                         id="expandLowerMenu"
                         type="button"
                         role="button"
-                        data-bs-toggle="tooltip" data-bs-title="Expand Menu"
+                        data-bs-toggle="tooltip" data-bs-title="${Localize.translate("expandMenu")}"
                         class="bee-color-button bg-gradient flex-grow-3 btn btn-sm rounded-pill fs-6 fw-medium">
                         <i class="d-flex justify-content-center remix-icon-element ri-arrow-up-s-line"></i>
                     </app-button>
@@ -25,8 +25,8 @@ class Footer extends HTMLElement implements LifecycleCallbacks {
                         id="getFavoritesButton"
                         type="button"
                         role="button"
-                        hasText ="Tools"
-                        data-bs-toggle="tooltip" data-bs-title="See Available Tools"
+                        hasText="${Localize.translate("tools")}"
+                        data-bs-toggle="tooltip" data-bs-title="${Localize.translate("tools")}"
                         class="bee-color-button bg-gradient flex-grow-2 btn btn-sm rounded-pill fs-6 fw-medium">
                     </app-button>
                     <app-dropdown class="dropup-center dropup">
@@ -34,7 +34,7 @@ class Footer extends HTMLElement implements LifecycleCallbacks {
                             id="bulkActionsBtn"
                             type="button"
                             role="button"
-                            hasText ="Bulk Actions"
+                            hasText="${Localize.translate("bulkActions")}"
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                             class="dropdown-toggle bee-color-button bg-gradient flex-grow-1 btn btn-sm rounded-pill
@@ -47,15 +47,14 @@ class Footer extends HTMLElement implements LifecycleCallbacks {
                         id="getFavoritesButton"
                         type="button"
                         role="button"
-                        hasText ="Get Favorites"
-                        data-bs-toggle="tooltip" data-bs-title="Click to see favorites"
-                        class="bee-color-button bg-gradient flex-grow-1 btn btn-sm rounded-pill fs-6 fw-medium">
+                        hasText="${Localize.translate("getFavorites")}"
+                        data-bs-toggle="tooltip" data-bs-title="${Localize.translate("getFavorites")}"
+                        class="bee-color-button bg-gradient flex-grow-1 btn btn-sm rounded-pill fs-6 fw-medium text-truncate">
                     </app-button>
                 </div>
             </section>
         `;
     }
-
 
     connectedCallback(): void { }
     attributeChangedCallback(): void { }
