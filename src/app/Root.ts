@@ -24,7 +24,7 @@ class AppRoot extends HTMLElement implements LifecycleCallbacks {
                 <section id="mainRoot" class="row mx-0 flex-grow-1">
                     <div class="d-flex flex-column w-100 h-100 align-items-center justify-content-between">
                         <div id="displayArea" class="flex-grow-1 overflow-auto">
-                            ${Localize.translate("infoInitial")}
+                            ${Localize.translate("infoInitial.message")}
                         </div>
                         <app-footer class="w-100">
                         </app-footer>
@@ -37,7 +37,7 @@ class AppRoot extends HTMLElement implements LifecycleCallbacks {
 	connectedCallback(): void {
 		console.info(AppRoot.welcomeMessage);
 	}
-	attributeChangedCallback(): void {}
+	attributeChangedCallback(): void { }
 	disconnectedCallback(): void {
 		console.clear();
 	}

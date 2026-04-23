@@ -102,7 +102,7 @@ class NavBar extends HTMLElement implements LifecycleCallbacks {
                             id="changeThemeButton"
                             type="button"
                             role="button"
-                            data-bs-toggle="tooltip" data-bs-title="${Localize.translate("changeTheme")}"
+                            data-bs-toggle="tooltip" data-bs-title="${Localize.translate("changeTheme.message")}"
                             class="bee-color-button btn btn-sm rounded-pill theme-switch-toggle-icon shadow-sm">
                             <i class="d-flex justify-content-center remix-icon-element ri-moon-line"></i>
                         </app-button>
@@ -112,7 +112,7 @@ class NavBar extends HTMLElement implements LifecycleCallbacks {
                             type="link"
                             role="link"
                             target="_blank" href="https://github.com/gokacinlar"
-                            data-bs-toggle="tooltip" data-bs-title="${Localize.translate("github")}"
+                            data-bs-toggle="tooltip" data-bs-title="${Localize.translate("github.message")}"
                             class="bee-color-button btn btn-sm rounded-pill theme-switch-toggle-icon shadow-sm">
                             <i class="d-flex justify-content-center remix-icon-element ri-github-line"></i>
                         </app-button>
@@ -122,7 +122,7 @@ class NavBar extends HTMLElement implements LifecycleCallbacks {
                             type="link"
                             role="link"
                             target="_blank" href="https://buymeacoffee.com/gokacinlar"
-                            data-bs-toggle="tooltip" data-bs-title="${Localize.translate("support")}"
+                            data-bs-toggle="tooltip" data-bs-title="${Localize.translate("support.message")}"
                             class="bee-color-button btn btn-sm rounded-pill theme-switch-toggle-icon shadow-sm">
                             <i class="d-flex justify-content-center remix-icon-element ri-cup-line"></i>
                         </app-button>
