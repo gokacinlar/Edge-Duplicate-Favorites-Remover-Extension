@@ -1,25 +1,94 @@
 {
-	"extensionName": "Eliminador de Favoritos Duplicados",
-	"extensionDescription": "Una extensión para identificar y eliminar favoritos duplicados en el navegador Microsoft Edge.",
-	"notByAiMessage": "Esta extensión es hecha principalmente por un humano.",
-	"getFavorites": "Obtener Favoritos",
-	"actionHint": "Haga clic en <span class=\"fw-bolder\">\"Obtener Favoritos\"</span> para mostrar sus favoritos/marcadores actuales.",
-	"infoInitial": "Sus favoritos/marcadores serán visibles aquí...",
-	"duplicatesFound": "¡Se encontraron NaN duplicados!",
-	"oneDuplicateFound": "¡Se encontró 1 duplicado!",
-	"noDuplicates": "No se encontraron duplicados.",
-	"successDeletion": "¡Ha eliminado correctamente todos los marcadores duplicados!",
-	"confirmDelete": "Esta acción no se puede deshacer. ¿Desea continuar?",
-	"searchEmptyFolders": "¿Desea buscar carpetas vacías?",
-	"emptyFoldersRemoved": "¡Todas las carpetas vacías han sido eliminadas!",
-	"noEmptyFolders": "¡No se encontraron carpetas vacías!",
-	"removeDuplicate": "Eliminar Duplicado",
-	"github": "GitHub",
-	"support": "Soporte",
-	"changeTheme": "Cambiar Tema",
-	"yes": "Sí",
-	"no": "No",
-	"tools": "Herramientas",
-	"bulkActions": "Acciones Masivas",
-	"expandMenu": "Expandir Menú"
+	"extensionName": {
+		"message": "Eliminador de Favoritos Duplicados",
+		"description": "Nombre de la extensión mostrado en el navegador"
+	},
+	"extensionDescription": {
+		"message": "Una extensión para identificar y eliminar favoritos duplicados en el navegador Microsoft Edge.",
+		"description": "Descripción de la extensión"
+	},
+	"notByAiMessage": {
+		"message": "Esta extensión es hecha principalmente por un humano.",
+		"description": "Aclaración de que esta extensión no es generada por IA"
+	},
+	"getFavorites": {
+		"message": "Obtener Favoritos",
+		"description": "Texto del botón para recuperar marcadores"
+	},
+	"actionHint": {
+		"message": "Haga clic en <span class=\"fw-bolder\">\"Obtener Favoritos\"</span> para mostrar sus favoritos/marcadores actuales.",
+		"description": "Texto de sugerencia que invita al usuario a hacer clic en el botón"
+	},
+	"infoInitial": {
+		"message": "Sus favoritos/marcadores serán visibles aquí...",
+		"description": "Texto de marcador antes de cargar favoritos"
+	},
+	"duplicatesFound": {
+		"message": "¡NaN duplicados encontrados!",
+		"description": "Mensaje cuando se encuentran múltiples duplicados"
+	},
+	"oneDuplicateFound": {
+		"message": "¡Se encontró 1 duplicado!",
+		"description": "Mensaje cuando se encuentra exactamente un duplicado"
+	},
+	"noDuplicates": {
+		"message": "No se encontraron duplicados.",
+		"description": "Mensaje cuando no existen duplicados"
+	},
+	"successDeletion": {
+		"message": "¡Ha eliminado correctamente todos los marcadores duplicados!",
+		"description": "Mensaje de éxito después de la eliminación"
+	},
+	"confirmDelete": {
+		"message": "Esta acción no se puede deshacer. ¿Desea continuar?",
+		"description": "Solicitud de confirmación antes de la eliminación"
+	},
+	"searchEmptyFolders": {
+		"message": "¿Desea buscar carpetas vacías?",
+		"description": "Solicitud que pregunta si desea buscar carpetas vacías"
+	},
+	"emptyFoldersRemoved": {
+		"message": "¡Todas las carpetas vacías han sido eliminadas!",
+		"description": "Mensaje de éxito después de eliminar carpetas vacías"
+	},
+	"noEmptyFolders": {
+		"message": "¡No se encontraron carpetas vacías!",
+		"description": "Mensaje cuando no existen carpetas vacías"
+	},
+	"removeDuplicate": {
+		"message": "Eliminar Duplicado",
+		"description": "Texto del botón para eliminar duplicado"
+	},
+	"github": {
+		"message": "GitHub",
+		"description": "Etiqueta del enlace a GitHub"
+	},
+	"support": {
+		"message": "Soporte",
+		"description": "Etiqueta del enlace de soporte"
+	},
+	"changeTheme": {
+		"message": "Cambiar Tema",
+		"description": "Etiqueta del cambio de tema"
+	},
+	"yes": {
+		"message": "Sí",
+		"description": "Respuesta afirmativa"
+	},
+	"no": {
+		"message": "No",
+		"description": "Respuesta negativa"
+	},
+	"tools": {
+		"message": "Herramientas",
+		"description": "Etiqueta del menú Herramientas"
+	},
+	"bulkActions": {
+		"message": "Acciones Masivas",
+		"description": "Etiqueta del menú Acciones Masivas"
+	},
+	"expandMenu": {
+		"message": "Expandir Menú",
+		"description": "Etiqueta del botón de expandir menú"
+	}
 }

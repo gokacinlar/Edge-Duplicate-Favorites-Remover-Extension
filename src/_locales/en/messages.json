@@ -1,25 +1,94 @@
 {
-	"extensionName": "Duplicate Favorites Remover",
-	"extensionDescription": "An extension to identify and remove duplicate favorites (a.k.a bookmarks) in Microsoft Edge web browser.",
-	"notByAiMessage": "This extension is primarily made by a human.",
-	"getFavorites": "Get Favorites",
-	"actionHint": "Click <span class=\"fw-bolder\">\"Get Favorites\"</span> to display your current favorites/bookmarks.",
-	"infoInitial": "Your favorites/bookmarks will be visible here...",
-	"duplicatesFound": "NaN duplicates have been found!",
-	"oneDuplicateFound": "1 duplicate has been found!",
-	"noDuplicates": "No duplicates have been found.",
-	"successDeletion": "You have successfully deleted all the duplicate bookmarks!",
-	"confirmDelete": "This action cannot be undone. Do you wish to continue?",
-	"searchEmptyFolders": "Do you want to search for empty folders?",
-	"emptyFoldersRemoved": "All empty folders have been removed!",
-	"noEmptyFolders": "No empty folders have been found!",
-	"removeDuplicate": "Remove Duplicate",
-	"github": "GitHub",
-	"support": "Support",
-	"changeTheme": "Change Theme",
-	"yes": "Yes",
-	"no": "No",
-	"tools": "Tools",
-	"bulkActions": "Bulk Actions",
-	"expandMenu": "Expand Menu"
+	"extensionName": {
+		"message": "Duplicate Favorites Remover",
+		"description": "Extension name displayed in the browser"
+	},
+	"extensionDescription": {
+		"message": "An extension to identify and remove duplicate favorites (a.k.a bookmarks) in Microsoft Edge web browser.",
+		"description": "Extension description"
+	},
+	"notByAiMessage": {
+		"message": "This extension is primarily made by a human.",
+		"description": "Clarification that this extension is not AI-generated"
+	},
+	"getFavorites": {
+		"message": "Get Favorites",
+		"description": "Button text to retrieve bookmarks"
+	},
+	"actionHint": {
+		"message": "Click <span class=\"fw-bolder\">\"Get Favorites\"</span> to display your current favorites/bookmarks.",
+		"description": "Hint text prompting user to click the button"
+	},
+	"infoInitial": {
+		"message": "Your favorites/bookmarks will be visible here...",
+		"description": "Placeholder text before favorites are loaded"
+	},
+	"duplicatesFound": {
+		"message": "NaN duplicates have been found!",
+		"description": "Message when multiple duplicates are found"
+	},
+	"oneDuplicateFound": {
+		"message": "1 duplicate has been found!",
+		"description": "Message when exactly one duplicate is found"
+	},
+	"noDuplicates": {
+		"message": "No duplicates have been found.",
+		"description": "Message when no duplicates exist"
+	},
+	"successDeletion": {
+		"message": "You have successfully deleted all the duplicate bookmarks!",
+		"description": "Success message after deletion"
+	},
+	"confirmDelete": {
+		"message": "This action cannot be undone. Do you wish to continue?",
+		"description": "Confirmation prompt before deletion"
+	},
+	"searchEmptyFolders": {
+		"message": "Do you want to search for empty folders?",
+		"description": "Prompt asking whether to search empty folders"
+	},
+	"emptyFoldersRemoved": {
+		"message": "All empty folders have been removed!",
+		"description": "Success message after removing empty folders"
+	},
+	"noEmptyFolders": {
+		"message": "No empty folders have been found!",
+		"description": "Message when no empty folders exist"
+	},
+	"removeDuplicate": {
+		"message": "Remove Duplicate",
+		"description": "Button text for removing duplicate"
+	},
+	"github": {
+		"message": "GitHub",
+		"description": "GitHub link label"
+	},
+	"support": {
+		"message": "Support",
+		"description": "Support link label"
+	},
+	"changeTheme": {
+		"message": "Change Theme",
+		"description": "Theme toggle label"
+	},
+	"yes": {
+		"message": "Yes",
+		"description": "Affirmative answer"
+	},
+	"no": {
+		"message": "No",
+		"description": "Negative answer"
+	},
+	"tools": {
+		"message": "Tools",
+		"description": "Tools menu label"
+	},
+	"bulkActions": {
+		"message": "Bulk Actions",
+		"description": "Bulk actions menu label"
+	},
+	"expandMenu": {
+		"message": "Expand Menu",
+		"description": "Menu expansion button label"
+	}
 }

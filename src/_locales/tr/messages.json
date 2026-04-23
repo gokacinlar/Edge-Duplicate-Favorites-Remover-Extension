@@ -1,25 +1,94 @@
 {
-	"extensionName": "Yinelenen Favorileri Kaldırıcı",
-	"extensionDescription": "Microsoft Edge web tarayıcısında yinelenen favorileri (yer imlerini) tanımlamaya ve kaldırmaya yönelik bir eklenti.",
-	"notByAiMessage": "Bu eklenti ağırlıklı olarak bir insan tarafından yapılmıştır.",
-	"getFavorites": "Favorileri Getir",
-	"actionHint": "Mevcut favorilerinizi/sigma yer imlerinizi görüntülemek için <span class=\"fw-bolder\">\"Favorileri Getir\"</span> düğmesine tıklayın.",
-	"infoInitial": "Favorileriniz/sigma yer imleriniz burada görünecek...",
-	"duplicatesFound": "NaN tane yinelenen favoriler bulundu!",
-	"oneDuplicateFound": "1 tane yinelenen favori bulundu!",
-	"noDuplicates": "Yinelenen favori bulunamadı.",
-	"successDeletion": "Tüm yinelenen yer imlerini başarıyla sildiniz!",
-	"confirmDelete": "Bu işlem geri alınamaz. Devam etmek istiyor musunuz?",
-	"searchEmptyFolders": "Boş klasörleri aramak ister misiniz?",
-	"emptyFoldersRemoved": "Tüm boş klasörler kaldırıldı!",
-	"noEmptyFolders": "Boş klasör bulunamadı!",
-	"removeDuplicate": "Yineleneni Kaldır",
-	"github": "GitHub",
-	"support": "Destek",
-	"changeTheme": "Temayı Değiştir",
-	"yes": "Evet",
-	"no": "Hayır",
-	"tools": "Araçlar",
-	"bulkActions": "Toplu İşlemler",
-	"expandMenu": "Menüyü Genişlet"
+	"extensionName": {
+		"message": "Yinelenen Favorileri Kaldırıcı",
+		"description": "Tarayıcıda görüntülenen uzantı adı"
+	},
+	"extensionDescription": {
+		"message": "Microsoft Edge web tarayıcısında yinelenen favorileri (yer imlerini) tanımlamaya ve kaldırmaya yönelik bir eklenti.",
+		"description": "Uzantı açıklaması"
+	},
+	"notByAiMessage": {
+		"message": "Bu eklenti ağırlıklı olarak bir insan tarafından yapılmıştır.",
+		"description": "Bu uzantının yapay zeka tarafından oluşturulmadığına dair açıklama"
+	},
+	"getFavorites": {
+		"message": "Favorileri Getir",
+		"description": "Yer imlerini almak için düğme metni"
+	},
+	"actionHint": {
+		"message": "Mevcut favorilerinizi/sigma yer imlerinizi görüntülemek için <span class=\"fw-bolder\">\"Favorileri Getir\"</span> düğmesine tıklayın.",
+		"description": "Kullanıcıyı düğmeye tıklamaya yönlendiren ipucu metni"
+	},
+	"infoInitial": {
+		"message": "Favorileriniz/sigma yer imleriniz burada görünecek...",
+		"description": "Favoriler yüklenmeden önce yer tutucu metni"
+	},
+	"duplicatesFound": {
+		"message": "NaN tane yinelenen favoriler bulundu!",
+		"description": "Birden fazla kopya bulunduğunda mesaj"
+	},
+	"oneDuplicateFound": {
+		"message": "1 tane yinelenen favori bulundu!",
+		"description": "Tam olarak bir kopya bulunduğunda mesaj"
+	},
+	"noDuplicates": {
+		"message": "Yinelenen favori bulunamadı.",
+		"description": "Kopya olmadığında mesaj"
+	},
+	"successDeletion": {
+		"message": "Tüm yinelenen yer imlerini başarıyla sildiniz!",
+		"description": "Silme işleminden sonra başarı mesajı"
+	},
+	"confirmDelete": {
+		"message": "Bu işlem geri alınamaz. Devam etmek istiyor musunuz?",
+		"description": "Silme işleminden önce doğrulma istemi"
+	},
+	"searchEmptyFolders": {
+		"message": "Boş klasörleri aramak ister misiniz?",
+		"description": "Boş klasörlerin aranıp aranmayacağını soran istem"
+	},
+	"emptyFoldersRemoved": {
+		"message": "Tüm boş klasörler kaldırıldı!",
+		"description": "Boş klasörlerin kaldırılmasından sonra başarı mesajı"
+	},
+	"noEmptyFolders": {
+		"message": "Boş klasör bulunamadı!",
+		"description": "Boş klasör olmadığında mesaj"
+	},
+	"removeDuplicate": {
+		"message": "Yineleneni Kaldır",
+		"description": "Yinelenenleri kaldırma düğmesi metni"
+	},
+	"github": {
+		"message": "GitHub",
+		"description": "GitHub bağlantısı etiketi"
+	},
+	"support": {
+		"message": "Destek",
+		"description": "Destek bağlantısı etiketi"
+	},
+	"changeTheme": {
+		"message": "Temayı Değiştir",
+		"description": "Tema değiştirme etiketi"
+	},
+	"yes": {
+		"message": "Evet",
+		"description": "Olumlu cevap"
+	},
+	"no": {
+		"message": "Hayır",
+		"description": "Olumsuz cevap"
+	},
+	"tools": {
+		"message": "Araçlar",
+		"description": "Araçlar menüsü etiketi"
+	},
+	"bulkActions": {
+		"message": "Toplu İşlemler",
+		"description": "Toplu işlemler menüsü etiketi"
+	},
+	"expandMenu": {
+		"message": "Menüyü Genişlet",
+		"description": "Menü genişletme düğmesi etiketi"
+	}
 }

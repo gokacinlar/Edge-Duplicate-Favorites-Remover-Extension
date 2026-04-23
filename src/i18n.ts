@@ -1,4 +1,5 @@
 import type { TranslationKey } from "./ts/interfaces/iFaces";
+import { displayToastifyMessage } from "./utils/helpers";
 import i18next from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import XHR from "i18next-http-backend";
@@ -40,6 +41,7 @@ class Localize {
 	private static initI18n(): void {
 		const stored = localStorage.getItem("i18nextLng") ?? "en";
 
+		// Fallback to English
 		if (!Localize.SUPPORTED_LANGS.includes(stored)) {
 			localStorage.setItem("i18nextLng", "en");
 		}
@@ -65,7 +67,11 @@ class Localize {
 
 	// Actual translation method
 	public static translate(key: TranslationKey): string {
-		return i18next.t(key);
+		const result = i18next.t(key) as { message?: string } | string;
+		if (typeof result === "object" && result !== null && "message" in result) {
+			return result.message ?? "";
+		}
+		return String(result);
 	}
 
 	private static attachLanguageButtons(): void {
@@ -106,10 +112,12 @@ class Localize {
 				if (typeof chrome !== "undefined") {
 					// Send a message to our service worker to notify user about reloading the page.
 					chrome.runtime.sendMessage({ type: "reloadTab" });
+					displayToastifyMessage("Please reload the extension to see the effects.",);
 				} else {
 					window.location.reload();
 				}
-			}).catch((err: unknown) => console.error("changeLanguage error:", err));
+			})
+			.catch((err: unknown) => console.error("changeLanguage error:", err));
 	}
 }
 

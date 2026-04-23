@@ -1,25 +1,94 @@
 {
-	"extensionName": "Supprimeur de Favoris en Double",
-	"extensionDescription": "Une extension pour identifier et supprimer les favoris en double (a.k.a signets) dans le navigateur Web Microsoft Edge.",
-	"notByAiMessage": "Cette extension est principalement réalisée par un humain.",
-	"getFavorites": "Obtenir les favoris",
-	"actionHint": "Cliquez sur <span class=\"fw-bolder\">\"Obtenir les favoris\"</span> pour afficher vos favoris/signets actuels.",
-	"infoInitial": "Vos favoris/signets seront visibles ici...",
-	"duplicatesFound": "NaN doublons trouvés!",
-	"oneDuplicateFound": "1 doublon trouvé!",
-	"noDuplicates": "Aucun doublon trouvé.",
-	"successDeletion": "Vous avez réussi à supprimer tous les signets en double!",
-	"confirmDelete": "Cette action ne peut pas être annulée. Voulez-vous continuer?",
-	"searchEmptyFolders": "Voulez-vous rechercher des dossiers vides?",
-	"emptyFoldersRemoved": "Tous les dossiers vides ont été supprimés!",
-	"noEmptyFolders": "Aucun dossier vide trouvé!",
-	"removeDuplicate": "Supprimer le doublon",
-	"github": "GitHub",
-	"support": "Soutien",
-	"changeTheme": "Changer le thème",
-	"yes": "Oui",
-	"no": "Non",
-	"tools": "Outils",
-	"bulkActions": "Actions groupées",
-	"expandMenu": "Développer le menu"
+	"extensionName": {
+		"message": "Supprimeur de Favoris en Double",
+		"description": "Nom de l'extension affiché dans le navigateur"
+	},
+	"extensionDescription": {
+		"message": "Une extension pour identifier et supprimer les favoris en double (a.k.a signets) dans le navigateur Web Microsoft Edge.",
+		"description": "Description de l'extension"
+	},
+	"notByAiMessage": {
+		"message": "Cette extension est principalement réalisée par un humain.",
+		"description": "Clarification que cette extension n'est pas générée par IA"
+	},
+	"getFavorites": {
+		"message": "Obtenir les favoris",
+		"description": "Texte du bouton pour récupérer les signets"
+	},
+	"actionHint": {
+		"message": "Cliquez sur <span class=\"fw-bolder\">\"Obtenir les favoris\"</span> pour afficher vos favoris/signets actuels.",
+		"description": "Texte d'indication invitant l'utilisateur à cliquer sur le bouton"
+	},
+	"infoInitial": {
+		"message": "Vos favoris/signets seront visibles ici...",
+		"description": "Texte indicatif avant le chargement des favoris"
+	},
+	"duplicatesFound": {
+		"message": "NaN doublons trouvés!",
+		"description": "Message lorsque plusieurs doublons sont trouvés"
+	},
+	"oneDuplicateFound": {
+		"message": "1 doublon trouvé!",
+		"description": "Message lorsqu'un seul doublon est trouvé"
+	},
+	"noDuplicates": {
+		"message": "Aucun doublon trouvé.",
+		"description": "Message lorsqu'aucun doublon n'existe"
+	},
+	"successDeletion": {
+		"message": "Vous avez réussi à supprimer tous les signets en double!",
+		"description": "Message de succès après suppression"
+	},
+	"confirmDelete": {
+		"message": "Cette action ne peut pas être annulée. Voulez-vous continuer?",
+		"description": "Invitation de confirmation avant suppression"
+	},
+	"searchEmptyFolders": {
+		"message": "Voulez-vous rechercher des dossiers vides?",
+		"description": "Invitation demandant s'il faut rechercher les dossiers vides"
+	},
+	"emptyFoldersRemoved": {
+		"message": "Tous les dossiers vides ont été supprimés!",
+		"description": "Message de succès après suppression des dossiers vides"
+	},
+	"noEmptyFolders": {
+		"message": "Aucun dossier vide trouvé!",
+		"description": "Message lorsqu'aucun dossier vide n'existe"
+	},
+	"removeDuplicate": {
+		"message": "Supprimer le doublon",
+		"description": "Texte du bouton pour supprimer le doublon"
+	},
+	"github": {
+		"message": "GitHub",
+		"description": "Étiquette du lien GitHub"
+	},
+	"support": {
+		"message": "Soutien",
+		"description": "Étiquette du lien de soutien"
+	},
+	"changeTheme": {
+		"message": "Changer le thème",
+		"description": "Étiquette du changement de thème"
+	},
+	"yes": {
+		"message": "Oui",
+		"description": "Réponse affirmative"
+	},
+	"no": {
+		"message": "Non",
+		"description": "Réponse négative"
+	},
+	"tools": {
+		"message": "Outils",
+		"description": "Étiquette du menu Outils"
+	},
+	"bulkActions": {
+		"message": "Actions groupées",
+		"description": "Étiquette du menu Actions groupées"
+	},
+	"expandMenu": {
+		"message": "Développer le menu",
+		"description": "Étiquette du bouton de développement du menu"
+	}
 }

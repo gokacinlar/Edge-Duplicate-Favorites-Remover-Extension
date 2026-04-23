@@ -1,25 +1,94 @@
 {
-	"extensionName": "Doppelte Favoriten Entferner",
-	"extensionDescription": "Eine Erweiterung zum Identifizieren und Entfernen doppelter Favoriten (a.k.a Lesezeichen) im Microsoft Edge-Webbrowser.",
-	"notByAiMessage": "Diese Erweiterung wird in erster Linie von einem Menschen vorgenommen.",
-	"getFavorites": "Favoriten abrufen",
-	"actionHint": "Klicken Sie auf <span class=\"fw-bolder\">\"Favoriten abrufen\"</span>, um Ihre aktuellen Favoriten/Lesezeichen anzuzeigen.",
-	"infoInitial": "Ihre Favoriten/Lesezeichen werden hier angezeigt...",
-	"duplicatesFound": "NaN Duplikate gefunden!",
-	"oneDuplicateFound": "1 Duplikat gefunden!",
-	"noDuplicates": "Keine Duplikate gefunden.",
-	"successDeletion": "Sie haben alle doppelten Lesezeichen erfolgreich gelöscht!",
-	"confirmDelete": "Diese Aktion kann nicht rückgängig gemacht werden. Möchten Sie fortfahren?",
-	"searchEmptyFolders": "Möchten Sie nach leeren Ordnern suchen?",
-	"emptyFoldersRemoved": "Alle leeren Ordner wurden entfernt!",
-	"noEmptyFolders": "Keine leeren Ordner gefunden!",
-	"removeDuplicate": "Duplikat entfernen",
-	"github": "GitHub",
-	"support": "Unterstützung",
-	"changeTheme": "Thema ändern",
-	"yes": "Ja",
-	"no": "Nein",
-	"tools": "Werkzeuge",
-	"bulkActions": "Massenaktionen",
-	"expandMenu": "Menü erweitern"
+	"extensionName": {
+		"message": "Doppelte Favoriten Entferner",
+		"description": "In der Browserleiste angezeigter Erweiterungsname"
+	},
+	"extensionDescription": {
+		"message": "Eine Erweiterung zum Identifizieren und Entfernen doppelter Favoriten (a.k.a Lesezeichen) im Microsoft Edge-Webbrowser.",
+		"description": "Beschreibung der Erweiterung"
+	},
+	"notByAiMessage": {
+		"message": "Diese Erweiterung wird in erster Linie von einem Menschen vorgenommen.",
+		"description": "Klarstellung, dass diese Erweiterung nicht von KI generiert wurde"
+	},
+	"getFavorites": {
+		"message": "Favoriten abrufen",
+		"description": "Schaltflächentext zum Abrufen von Lesezeichen"
+	},
+	"actionHint": {
+		"message": "Klicken Sie auf <span class=\"fw-bolder\">\"Favoriten abrufen\"</span>, um Ihre aktuellen Favoriten/Lesezeichen anzuzeigen.",
+		"description": "Hinweistext, der den Benutzer zum Klicken auf die Schaltfläche auffordert"
+	},
+	"infoInitial": {
+		"message": "Ihre Favoriten/Lesezeichen werden hier angezeigt...",
+		"description": "Platzhaltertext bevor Favoriten geladen werden"
+	},
+	"duplicatesFound": {
+		"message": "NaN Duplikate gefunden!",
+		"description": "Meldung wenn mehrere Duplikate gefunden wurden"
+	},
+	"oneDuplicateFound": {
+		"message": "1 Duplikat gefunden!",
+		"description": "Meldung wenn genau ein Duplikat gefunden wurde"
+	},
+	"noDuplicates": {
+		"message": "Keine Duplikate gefunden.",
+		"description": "Meldung wenn keine Duplikate vorhanden sind"
+	},
+	"successDeletion": {
+		"message": "Sie haben alle doppelten Lesezeichen erfolgreich gelöscht!",
+		"description": "Erfolgsmeldung nach dem Löschen"
+	},
+	"confirmDelete": {
+		"message": "Diese Aktion kann nicht rückgängig gemacht werden. Möchten Sie fortfahren?",
+		"description": "Bestätigungsaufforderung vor dem Löschen"
+	},
+	"searchEmptyFolders": {
+		"message": "Möchten Sie nach leeren Ordnern suchen?",
+		"description": "Aufforderung, die fragt, ob nach leeren Ordnern gesucht werden soll"
+	},
+	"emptyFoldersRemoved": {
+		"message": "Alle leeren Ordner wurden entfernt!",
+		"description": "Erfolgsmeldung nach dem Entfernen leerer Ordner"
+	},
+	"noEmptyFolders": {
+		"message": "Keine leeren Ordner gefunden!",
+		"description": "Meldung wenn keine leeren Ordner vorhanden sind"
+	},
+	"removeDuplicate": {
+		"message": "Duplikat entfernen",
+		"description": "Schaltflächentext zum Entfernen von Duplikaten"
+	},
+	"github": {
+		"message": "GitHub",
+		"description": "GitHub-Link-Bezeichnung"
+	},
+	"support": {
+		"message": "Unterstützung",
+		"description": "Support-Link-Bezeichnung"
+	},
+	"changeTheme": {
+		"message": "Thema ändern",
+		"description": "Themenwechsel-Bezeichnung"
+	},
+	"yes": {
+		"message": "Ja",
+		"description": "Bejahende Antwort"
+	},
+	"no": {
+		"message": "Nein",
+		"description": "Verneinende Antwort"
+	},
+	"tools": {
+		"message": "Werkzeuge",
+		"description": "Bezeichnung des Werkzeuge-Menüs"
+	},
+	"bulkActions": {
+		"message": "Massenaktionen",
+		"description": "Bezeichnung des Massenaktionen-Menüs"
+	},
+	"expandMenu": {
+		"message": "Menü erweitern",
+		"description": "Bezeichnung der Menüerweiterungsschaltfläche"
+	}
 }
