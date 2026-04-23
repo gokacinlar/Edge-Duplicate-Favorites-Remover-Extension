@@ -1,3 +1,6 @@
+import Toastify from "toastify-js";
+import "toastify-js/src/toastify.css";
+
 /**
  * This function creates a DOM-ready class element within a custom component to streamline element creation
  * @param target Usually the class instance/element itself: "this"
@@ -36,5 +39,33 @@ export function adjustThemeIconState(
 		element.classList.add(current === "dark" ? darkClass : lightClass);
 	} catch (error: unknown) {
 		throw new Error(`Error while adjusting theme switch button icon: ${error}`);
+	}
+}
+
+/**
+ * This function creates a toastify message to display information
+ * @param message String input (message)
+ * @returns Void
+ */
+export function displayToastifyMessage(message: string): void {
+	if (!message) {
+		console.error("Please provide toastify message to be shown.");
+		return;
+	} else {
+		Toastify({
+			text: message,
+			className: "app-toast-message bg-gradient rounded-pill fw-bold",
+			duration: 3000,
+			newWindow: true,
+			close: false,
+			gravity: "bottom",
+			position: "center",
+			stopOnFocus: false,
+			style: {
+				color: "#23201F",
+				background: "#FFC107",
+				border: "1px solid #23201F"
+			},
+		}).showToast();
 	}
 }
