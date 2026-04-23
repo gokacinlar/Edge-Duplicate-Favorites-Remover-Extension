@@ -30,6 +30,7 @@
     "@types/bootstrap": "^5.2.10",
     "@types/chrome": "^0.1.40",
     "@types/node": "^25.5.0",
+    "@types/toastify-js": "^1.12.4",
     "autoprefixer": "^10.4.27",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^14.0.0",
