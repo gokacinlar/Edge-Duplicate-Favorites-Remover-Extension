@@ -90,5 +90,9 @@
 	"expandMenu": {
 		"message": "Développer le menu",
 		"description": "Étiquette du bouton de développement du menu"
+	},
+	"expandMenuLowered": {
+		"message": "Minimiser le menu",
+		"description": "Menu réduisant l'étiquette du bouton"
 	}
 }

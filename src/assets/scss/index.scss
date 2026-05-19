@@ -94,6 +94,7 @@ html[data-theme="dark"] {
     --color-dark: #23201F;
     --color-orange: #9C5C35;
     --color-dark-yellow: #FFC107;
+    --color-pick-duplicates: #e5310c;
 }
 
 @layer primary {
@@ -147,6 +148,12 @@ html[data-theme="dark"] {
     }
 }
 
+@layer components {
+    app-footer {
+        transition: flex-grow .30s cubic-bezier(0.455, 0.03, 0.515, 0.955) !important;
+    }
+}
+
 @layer buttons {
     .bee-color-button {
         @include val-with-important("background-color", var(--color-dark-yellow));
@@ -157,11 +164,19 @@ html[data-theme="dark"] {
         @include val-with-important("background-color", var(--color-dark-yellow));
         @include val-with-important("color", var(--color-dark));
     }
+
+    #getFavoritesButton {
+        @include val-with-important("background-color", var(--color-pick-duplicates));
+    }
 }
 
 @layer icons {
     .remix-icon-element {
         width: 22px;
         font-size: calc($font-size + .15rem);
+    }
+
+    .expand-lower-arrow {
+        transition: rotate .25s ease-in-out;
     }
 }

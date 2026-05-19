@@ -90,5 +90,9 @@
 	"expandMenu": {
 		"message": "Menü erweitern",
 		"description": "Bezeichnung der Menüerweiterungsschaltfläche"
+	},
+	"expandMenuLowered": {
+		"message": "Menü schließen",
+		"description": "Menü off Knopf-Tag"
 	}
 }

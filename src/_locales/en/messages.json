@@ -90,5 +90,9 @@
 	"expandMenu": {
 		"message": "Expand Menu",
 		"description": "Menu expansion button label"
+	},
+	"expandMenuLowered": {
+		"message": "Minimize Menu",
+		"description": "Menu minimizing button label"
 	}
 }

@@ -90,5 +90,9 @@
 	"expandMenu": {
 		"message": "Menüyü Genişlet",
 		"description": "Menü genişletme düğmesi etiketi"
+	},
+	"expandMenuLowered": {
+		"message": "Menüyü Kapat",
+		"description": "Menü kapatma düğmesi etiketi"
 	}
 }

@@ -86,4 +86,5 @@ export type TranslationKey =
 	| "no.message"
 	| "tools.message"
 	| "bulkActions.message"
-	| "expandMenu.message";
+	| "expandMenu.message"
+	| "expandMenuLowered.message";
