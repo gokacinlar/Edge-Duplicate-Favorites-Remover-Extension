@@ -1,4 +1,4 @@
-@use "globals.scss";
+@use "_globals";
 @use "~flag-icons/sass/flag-icons.scss" with ($flag-icons-path: "~flag-icons/flags",
     $flag-icons-included-countries: ("tr", "de", "fr", "us"));
 
@@ -38,6 +38,15 @@
     -webkit-border-top-right-radius: #{$val};
     border-top-left-radius: #{$val};
     border-top-right-radius: #{$val};
+}
+
+@mixin hide-scrollbar() {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 @font-face {
@@ -93,7 +102,7 @@ html[data-theme="dark"] {
     --color-coffee-alt: #C8C6B7;
     --color-dark: #23201F;
     --color-orange: #9C5C35;
-    --color-dark-yellow: #FFC107;
+    --color-dark-yellow: #ffc107;
     --color-pick-duplicates: #e5310c;
 }
 
@@ -143,6 +152,21 @@ html[data-theme="dark"] {
         }
     }
 
+    .bulk-actions-list {
+        &>li>.bulk-action-btn:nth-of-type(even) {
+            background-color: var(--color-coffee-alt) !important;
+        }
+
+        &>li>.bulk-action-btn:nth-of-type(odd) {
+            color: var(--color-fg) !important;
+        }
+
+        &>li>.bulk-action-btn:nth-last-of-type(odd):hover {
+            color: var(--color-bg) !important;
+            background-color: var(--color-coffee-alt) !important;
+        }
+    }
+
     .lang-switch-list>li {
         cursor: pointer;
     }
@@ -151,6 +175,15 @@ html[data-theme="dark"] {
 @layer components {
     app-footer {
         transition: flex-grow .30s cubic-bezier(0.455, 0.03, 0.515, 0.955) !important;
+    }
+
+    .duplicate-item {
+        @include val-with-important(max-height, 100px);
+        @include val-with-important(min-width, 100%);
+    }
+
+    .scrollbar-hide {
+        @include hide-scrollbar();
     }
 }
 
