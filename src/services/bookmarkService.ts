@@ -1,3 +1,4 @@
+/// <reference types="chrome"/>
 import type { BookmarkState, BookmarkTreeNode } from "../ts/interfaces/iFaces";
 
 class BookmarkService {
@@ -8,8 +9,6 @@ class BookmarkService {
 		duplicateFolders: {},
 		removeButtons: [],
 	};
-
-	private constructor() { }
 
 	public static getInstance(): BookmarkService {
 		if (!BookmarkService.instance) {
@@ -164,7 +163,68 @@ class BookmarkService {
 		if (!this.state.duplicateFolders[url]) {
 			this.state.duplicateFolders[url] = [];
 		}
+
 		this.state.duplicateFolders[url].push(folderPath);
+	}
+
+	// Traverse through bookmarks and bring duplicates
+	public async findDuplicates(): Promise<BookmarkState> {
+		// Reset duplicate state first
+		this.resetState();
+		const tree = await this.getBookmarks();
+		this.traverseBookmarks(tree);
+		return this.state;
+	}
+
+	private traverseBookmarks(nodes: BookmarkTreeNode[], currentPath: string = ""): void {
+		for (const node of nodes) {
+			if (node.url && node.title) {
+				if (this.isUrlSeen(node.url)) {
+					this.incrementDuplicateCount();
+					this.addDuplicateFolder(node.url, currentPath);
+				} else {
+					this.markUrlAsSeen(node.url);
+				}
+			}
+
+			// Only add folder title if currentPath is non-empty (avoid root titles 0/1)
+			// MSEdge has this root folders, undeletable.
+			// keep empty for root-level children
+			if (node.children) {
+				// Determine folder name
+				let folderName = node.title || "";
+				if (node.id) {
+					const specialFolder = this.getSpecialFolderName(node.id);
+
+					if (specialFolder) {
+						folderName = specialFolder;
+					}
+
+					// Build path
+					const folderPath = currentPath ? `${currentPath} > ${folderName}` : folderName;
+					this.traverseBookmarks(node.children, folderPath);
+				}
+			}
+		}
+	}
+
+	// Define MSEdge Special folders that cannot be deleted
+	public getSpecialFolderName(id: string): string | null {
+		const specialFolders: { [key: string]: string } = {
+			"0": "Root",
+			"1": "Bookmark Toolbar",
+			"2": "Other Bookmarks",
+			"727": "Mobile Bookmarks"
+		};
+		return specialFolders[id] || null;
+	}
+
+	public isBookmarkToolbar(id: string): boolean {
+		return id === "1";
+	}
+
+	public isOtherBookmarks(id: string): boolean {
+		return id === "2";
 	}
 }
 
