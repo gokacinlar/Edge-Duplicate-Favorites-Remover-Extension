@@ -14,6 +14,7 @@
     "isolatedModules": true,
     "noUnusedLocals": false,
     "noUnusedParameters": true,
+    "noUncheckedSideEffectImports": false, // Later change due to TS 6 deprecation: https://www.typescriptlang.org/tsconfig/#noUncheckedSideEffectImports
     "useDefineForClassFields": true,
     "allowJs": true,
     "checkJs": false,
