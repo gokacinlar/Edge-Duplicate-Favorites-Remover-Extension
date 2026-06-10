@@ -5,25 +5,25 @@ import { adjustThemeIconState } from "../../utils/helpers";
 import ThemeManager from "../../utils/themeModeSwitchHandler";
 
 class NavBar extends HTMLElement implements LifecycleCallbacks {
-    constructor() {
-        super();
-        new CreateTemplate().initializeComponent(NavBar.navBarLayout(), this);
-    }
+	constructor() {
+		super();
+		new CreateTemplate().initializeComponent(NavBar.navBarLayout(), this);
+	}
 
-    private handleThemeToggle(): void {
-        const theme = ThemeManager.getInstance();
-        theme.toggle();
-    }
+	private handleThemeToggle(): void {
+		const theme = ThemeManager.getInstance();
+		theme.toggle();
+	}
 
-    private setupThemeButton(): void {
-        const themeButton = this.querySelector("#changeThemeButton");
-        if (themeButton) {
-            themeButton.addEventListener("click", () => this.handleThemeToggle());
-        }
-    }
+	private setupThemeButton(): void {
+		const themeButton = this.querySelector("#changeThemeButton");
+		if (themeButton) {
+			themeButton.addEventListener("click", () => this.handleThemeToggle());
+		}
+	}
 
-    private static navBarLayout(): string {
-        return /*html*/ `
+	private static navBarLayout(): string {
+		return /*html*/ `
             <nav class="navbar d-flex flex-row align-items-center justify-content-between py-2">
                 <app-button
                     type="link"
@@ -73,7 +73,7 @@ class NavBar extends HTMLElement implements LifecycleCallbacks {
                                             data-language="fr"
                                             hasText="French"
                                             >
-                                            <span class="fi fi-fr"></span></li>
+                                            <span class="fi fi-fr"></span>
                                         </app-button>
                                     </li>
                                     <li class="dropdown-item p-0 m-0 rounded-2">
@@ -82,7 +82,7 @@ class NavBar extends HTMLElement implements LifecycleCallbacks {
                                             data-language="es"
                                             hasText="Spanish"
                                             >
-                                            <span class="fi fi-es"></span></li>
+                                            <span class="fi fi-es"></span>
                                         </app-button>
                                     </li>
                                     <li class="dropdown-item p-0 m-0 rounded-2">
@@ -91,7 +91,7 @@ class NavBar extends HTMLElement implements LifecycleCallbacks {
                                             data-language="tr"
                                             hasText="Turkish"
                                             >
-                                            <span class="fi fi-tr"></span></li>
+                                            <span class="fi fi-tr"></span>
                                         </app-button>
                                     </li>
                             </ul>
@@ -130,28 +130,28 @@ class NavBar extends HTMLElement implements LifecycleCallbacks {
                 </ul>
             </nav>
         `;
-    }
+	}
 
-    private updateThemeIcon(): void {
-        const iconEl = this.querySelector(".theme-switch-toggle-icon i");
-        if (iconEl) {
-            const theme = ThemeManager.getInstance().getTheme();
-            adjustThemeIconState(
-                iconEl as HTMLElement,
-                theme,
-                "ri-moon-line",
-                "ri-sun-line",
-            );
-        }
-    }
+	private updateThemeIcon(): void {
+		const iconEl = this.querySelector(".theme-switch-toggle-icon i");
+		if (iconEl) {
+			const theme = ThemeManager.getInstance().getTheme();
+			adjustThemeIconState(
+				iconEl as HTMLElement,
+				theme,
+				"ri-moon-line",
+				"ri-sun-line",
+			);
+		}
+	}
 
-    connectedCallback(): void {
-        this.updateThemeIcon();
-        this.setupThemeButton();
-        document.addEventListener("theme-changed", () => this.updateThemeIcon());
-    }
-    attributeChangedCallback(): void { }
-    disconnectedCallback(): void { }
+	connectedCallback(): void {
+		this.updateThemeIcon();
+		this.setupThemeButton();
+		document.addEventListener("theme-changed", () => this.updateThemeIcon());
+	}
+	attributeChangedCallback(): void {}
+	disconnectedCallback(): void {}
 }
 
 export default NavBar;

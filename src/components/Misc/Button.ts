@@ -6,13 +6,22 @@ class Button extends HTMLElement implements LifecycleCallbacks {
 	private _isSetUp: boolean = false;
 	private _originalInnerHTML: string | null = null;
 
-	public static observedAttributes = [
-		"class", "href", "type", "role", "title", "hasText", "isExpandable", "target"
+	public static readonly observedAttributes = [
+		"class",
+		"href",
+		"type",
+		"role",
+		"title",
+		"hasText",
+		"isExpandable",
+		"target",
 	];
 
 	private create(): HTMLElement {
 		if (!this._buttonElement) {
-			this._buttonElement = createClassElement<HTMLElement>(this, HTMLElement) || document.createElement("button");
+			this._buttonElement =
+				createClassElement<HTMLElement>(this, HTMLElement) ||
+				document.createElement("button");
 			this._originalInnerHTML = this._buttonElement.innerHTML;
 		}
 		return this._buttonElement;
@@ -40,7 +49,7 @@ class Button extends HTMLElement implements LifecycleCallbacks {
 			if (hasText) {
 				const original = this._originalInnerHTML ?? button.innerHTML;
 				button.innerHTML = hasText + original;
-			};
+			}
 		} catch (error: unknown) {
 			throw new Error(`Error while creating class element: ${error}`);
 		}
@@ -77,7 +86,7 @@ class Button extends HTMLElement implements LifecycleCallbacks {
 		return new CustomEvent("button-element-expanding", {
 			bubbles: true,
 			cancelable: true,
-			detail: "This event listens for if app-button has an expandable state."
+			detail: "This event listens for if app-button has an expandable state.",
 		});
 	}
 
